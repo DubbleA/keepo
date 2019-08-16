@@ -16,6 +16,7 @@
   <link href="../../assets/css/nucleo-icons.css" rel="stylesheet" />
   <!-- CSS Files -->
   <link href="../../assets/css/black-dashboard.css?v=1.0.0" rel="stylesheet" />
+  
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="../../assets/demo/demo.css" rel="stylesheet" />
 </head>
@@ -32,13 +33,13 @@
       <!--
         Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red"
     -->
-      <div class="sidebar-wrapper">
+      <div class="sidebar-wrapper" >
         <div class="logo">
           <a href="javascript:void(0)" class="simple-text logo-mini">
-            CT
+            AG
           </a>
           <a href="javascript:void(0)" class="simple-text logo-normal">
-            Creative Tim
+            Aaryan Gupta
           </a>
         </div>
         <ul class="nav">
@@ -418,7 +419,7 @@
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" data-toggle="tab" href="#link11">
-                        <i class="tim-icons icon-settings"></i> Add Multiple Sales
+                        <i class="tim-icons icon-settings"></i> Add Multiple
                       </a>
                     </li>
                   </ul>
@@ -429,19 +430,16 @@
                     <div class="tab-pane active" id="link10">
 
                      <div class="row">
-                       <label class="col-sm-2 col-form-label">Name</label>
+                       <label class="col-sm-3 col-form-label">Name<code> *</code></label>
                        <div class="col-sm-7">
                          <div class="form-group">
                            <input class="form-control" type="text" name="required" required />
                          </div>
                        </div>
-                       <label class="col-sm-3 label-on-right">
-                         <code>required</code>
-                       </label>
-                     </div>
+                      </div>
                     
                      <div class="row">
-                       <label class="col-md-2 col-form-label">Brand</label>
+                       <label class="col-md-3 col-form-label">Brand</label>
                        <div class="col-sm-7">
                          <div class="form-group">
                            <input class="form-control" type="text">
@@ -450,7 +448,7 @@
                      </div>
 
                      <div class="row">
-                       <label class="col-md-2 col-form-label">SKU</label>
+                       <label class="col-md-3 col-form-label">SKU</label>
                        <div class="col-sm-7">
                          <div class="form-group">
                            <input class="form-control" type="text">
@@ -459,7 +457,7 @@
                      </div>
 
                      <div class="row">
-                       <label class="col-md-2 col-form-label">Color</label>
+                       <label class="col-md-3 col-form-label">Color</label>
                        <div class="col-sm-7">
                          <div class="form-group">
                            <input class="form-control" type="text">
@@ -468,7 +466,7 @@
                      </div>
 
                      <div class="row">
-                       <label class="col-md-2 col-form-label">Condition</label>
+                       <label class="col-md-3 col-form-label">Condition</label>
                        <div class="col-sm-7">
                          <div class="form-group">
                            <input class="form-control" type="text">
@@ -477,7 +475,7 @@
                      </div>
                      
                      <div class="row">
-                       <label class="col-md-2 col-form-label">Size</label>
+                       <label class="col-md-3 col-form-label">Size<code> *</code></label>
                        <div class="col-sm-7">
                         <select class="selectpicker" data-size="7" data-style="btn btn-primary" title="Single Select">
                           
@@ -519,17 +517,87 @@
                       </div>
                      </div>
                      
+                     <div class="row">
+                      <label class="col-md-3 col-form-label"># of Size<code> *</code></label>
+                      <div class="col-sm-7">
+                        <div class="form-group">
+                          <input class="form-control" type="number" name="number" required />
+                        </div>
+                      </div>
+                    </div>
+
+                     <div class="row">
+                      <label class="col-md-3 col-form-label">Cost<code> *</code></label>
+                      <div class="col-sm-7">
+                        <div class="form-group">
+                          <input class="form-control" type="number" name="number" required />
+                        </div>
+                      </div>
+                    </div>
+                      
+                      <div class="row">
+                        <label class="col-md-3 col-form-label">Cop Date<code> *</code></label>
+                        <div class="col-sm-7">
+                          <div class="form-group">
+                            <input type="text" class="form-control datepicker" value="06/01/2019">
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div class="row">
+                        <label class="col-md-3 col-form-label">Sold Date<code> *</code></label>
+                        <div class="col-sm-7">
+                          <div class="form-group">
+                            <input type="text" class="form-control datepicker" value="06/01/2019">
+                          </div>
+                        </div>
+                      </div>
                     
 
                     </div>
 
 
                     <div class="tab-pane" id="link11">
-                      Efficiently unleash cross-media information without cross-media value. Quickly maximize timely
-                      deliverables for real-time schemas.
-                      <br>
-                      <br>Dramatically maintain clicks-and-mortar solutions without functional solutions.
+                      
+                      <div class="row">
+                        <div class="col-md-8 ml-auto mr-auto">
+                          <button class="btn btn-primary">Add Item</button>
+                        </div>
+                       </div>
+                      
+
+                      <!-- <div class="row">
+                        <label class="col-sm-3 col-form-label">Name<code> *</code></label>
+                        <div class="col-sm-7">
+                          <div class="form-group">
+                            <input class="form-control" type="text" name="required" required />
+                          </div>
+                        </div>
+                       </div>
+                      
+                       <div class="row">
+                        <label class="col-md-3 col-form-label">SKU</label>
+                        <div class="col-sm-7">
+                          <div class="form-group">
+                            <input class="form-control" type="text">
+                          </div>
+                        </div>
+                      </div>
+                       
+                      <div class="row">
+                        <label class="col-md-3 col-form-label">Condition</label>
+                        <div class="col-sm-7">
+                          <div class="form-group">
+                            <input type="text" class="form-control" value="New" disabled>
+                          </div>
+                        </div>
+                      </div> -->
+                    
+
+
                     </div>
+
+
                   </div>
                 </div>
               </div>
@@ -537,6 +605,11 @@
           </div>
         </div>
           
+
+        
+
+
+
         </div>
       </div>
       <footer class="footer">
@@ -771,6 +844,15 @@
           $('body').removeClass('white-content');
         });
       });
+    });
+  </script>
+  <script>
+    $(document).ready(function() {
+      // initialise Datetimepicker and Sliders
+      blackDashboard.initDateTimePicker();
+      if ($('.slider').length != 0) {
+        demo.initSliders();
+      }
     });
   </script>
 </body>
