@@ -1,0 +1,181 @@
+[ {
+    "inventory": {
+      "category": "",
+      "brand": "Nike Adapt BB",
+      "name": "Nike Adapt BB Black Pure Platinum (US Charger)",
+      "SKU": "AO2582-001",
+      "color": "",
+      "size": 9.5,
+      "condition": "new",
+      "notes": ""
+    },
+    "sale": {
+      "market": "stockX",
+      "orderNum": "6978911-6878670",
+      "trackingNum": "",
+      "saleDate": "2019-08-07 22:06:46",
+      "soldPrice": 400,
+      "totalAfterFees": 350,
+      "notes": ""
+    },
+    "expense": {
+      "expenseName": "",
+      "expensePrice": "",
+      "expenseReason": "",
+      "expenseDateStart": "",
+      "expenseOccurance": "",
+      "expenseEnded": "",
+      "expenseNotes": ""
+    }
+  }
+, {
+    "inventory": {
+      "category": "",
+      "brand": "Jordan 1 Retro High",
+      "name": "Jordan 1 Retro High Neutral Grey Hyper Crimson",
+      "SKU": "555088-018",
+      "color": "",
+      "size": 9.5,
+      "condition": "new",
+      "notes": ""
+    },
+    "sale": {
+      "market": "stockX",
+      "orderNum": "6977584-6877343",
+      "trackingNum": "",
+      "saleDate": "2019-08-07 20:22:46",
+      "soldPrice": 203,
+      "totalAfterFees": 177.625,
+      "notes": ""
+    },
+    "expense": {
+      "expenseName": "",
+      "expensePrice": "",
+      "expenseReason": "",
+      "expenseDateStart": "",
+      "expenseOccurance": "",
+      "expenseEnded": "",
+      "expenseNotes": ""
+    }
+  }
+, {
+    "inventory": {
+      "category": "",
+      "brand": "Jordan 1 Retro High",
+      "name": "Jordan 1 Retro High Neutral Grey Hyper Crimson",
+      "SKU": "555088-018",
+      "color": "",
+      "size": 9.5,
+      "condition": "new",
+      "notes": ""
+    },
+    "sale": {
+      "market": "stockX",
+      "orderNum": "6977575-6877334",
+      "trackingNum": "",
+      "saleDate": "2019-08-07 20:22:28",
+      "soldPrice": 203,
+      "totalAfterFees": 177.625,
+      "notes": ""
+    },
+    "expense": {
+      "expenseName": "",
+      "expensePrice": "",
+      "expenseReason": "",
+      "expenseDateStart": "",
+      "expenseOccurance": "",
+      "expenseEnded": "",
+      "expenseNotes": ""
+    }
+  }
+, {
+    "inventory": {
+      "category": "",
+      "brand": "Jordan 1 Retro High",
+      "name": "Jordan 1 Retro High UNC Patent (W)",
+      "SKU": "CD0461-401",
+      "color": "",
+      "size": "11W",
+      "condition": "new",
+      "notes": ""
+    },
+    "sale": {
+      "market": "stockX",
+      "orderNum": "6972853-6872612",
+      "trackingNum": "",
+      "saleDate": "2019-08-07 15:06:54",
+      "soldPrice": 442,
+      "totalAfterFees": 386.75,
+      "notes": ""
+    },
+    "expense": {
+      "expenseName": "",
+      "expensePrice": "",
+      "expenseReason": "",
+      "expenseDateStart": "",
+      "expenseOccurance": "",
+      "expenseEnded": "",
+      "expenseNotes": ""
+    }
+  }
+, {
+    "inventory": {
+      "category": "",
+      "brand": "Jordan 1 Retro High",
+      "name": "Jordan 1 Retro High Neutral Grey Hyper Crimson",
+      "SKU": "555088-018",
+      "color": "",
+      "size": 9,
+      "condition": "new",
+      "notes": ""
+    },
+    "sale": {
+      "market": "stockX",
+      "orderNum": "6972675-6872434",
+      "trackingNum": "",
+      "saleDate": "2019-08-07 14:52:01",
+      "soldPrice": 210,
+      "totalAfterFees": 183.75,
+      "notes": ""
+    },
+    "expense": {
+      "expenseName": "",
+      "expensePrice": "",
+      "expenseReason": "",
+      "expenseDateStart": "",
+      "expenseOccurance": "",
+      "expenseEnded": "",
+      "expenseNotes": ""
+    }
+  }
+, {
+    "inventory": {
+      "category": "",
+      "brand": "Jordan 1 Retro High",
+      "name": "Jordan 1 Retro High Neutral Grey Hyper Crimson",
+      "SKU": "555088-018",
+      "color": "",
+      "size": 9,
+      "condition": "new",
+      "notes": ""
+    },
+    "sale": {
+      "market": "stockX",
+      "orderNum": "6972662-6872421",
+      "trackingNum": "",
+      "saleDate": "2019-08-07 14:51:19",
+      "soldPrice": 210,
+      "totalAfterFees": 183.75,
+      "notes": ""
+    },
+    "expense": {
+      "expenseName": "",
+      "expensePrice": "",
+      "expenseReason": "",
+      "expenseDateStart": "",
+      "expenseOccurance": "",
+      "expenseEnded": "",
+      "expenseNotes": ""
+    }
+  }
+]

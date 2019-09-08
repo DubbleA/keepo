@@ -1,0 +1,32 @@
+[
+    {
+    "inventory":{
+        "category": "",
+        "brand": "",
+        "name": "",
+        "SKU": "",
+        "color": "",
+        "size": "",
+        "condition": "",
+        "notes": ""
+    },
+    "sale":{
+        "market": "",
+        "orderNum": "",
+        "trackingNum": "",
+        "saleDate": "",
+        "soldPrice": "",
+        "notes": ""
+    },
+    "expense":{
+        "expenseName": "",
+        "expensePrice": "",
+        "expenseReason": "",
+        "expenseDateStart": "",
+        "expenseOccurance": "",
+        "expenseEnded": "",
+        "expenseNotes": ""
+    }
+
+    }
+]
