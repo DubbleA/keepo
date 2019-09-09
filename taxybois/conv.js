@@ -44,45 +44,45 @@ function swiftcsvConv() {
 
 }
 
-// function stockXcsvConv() {
-//     const filepath = 'stockXtest.csv'
-//     const fs = require('fs');
-//     const csv = require('csvtojson');
-//     csv({
-//             checkType: true,
-//             noheader: false,
-//             headers: ['item', 'name', 'size', 'SKU', 'orderNum', 'sellingPrice', 'currency', 'finalPayout', 'finalCurrency', 'payMethod', 'date', 'status']
-//         })
-//         .fromFile(filepath)
-//         .then((jsonObj) => {
-//             var finaljson = [];
-//             for (var i = 0; i < jsonObj.length; i++) {
-//                 var json = jsonObj[i];
+function stockXcsvConv() {
+    const filepath = 'stockXtest.csv'
+    const fs = require('fs');
+    const csv = require('csvtojson');
+    csv({
+            checkType: true,
+            noheader: false,
+            headers: ['item', 'name', 'size', 'SKU', 'orderNum', 'sellingPrice', 'currency', 'finalPayout', 'finalCurrency', 'payMethod', 'date', 'status']
+        })
+        .fromFile(filepath)
+        .then((jsonObj) => {
+            var finaljson = [];
+            for (var i = 0; i < jsonObj.length; i++) {
+                var json = jsonObj[i];
 
-//                 var csv = {
-//                     brand: jsonObj[i]["item"],
-//                     name: jsonObj[i]["name"],
-//                     size: jsonObj[i]["size"],
-//                     SKU: jsonObj[i]["SKU"],
-//                     orderNum: jsonObj[i]["orderNum"],
-//                     sellingPrice: jsonObj[i]["sellingPrice"],
-//                     totalAfterFees: jsonObj[i]["finalPayout"],
-//                     payMethod: jsonObj[i]["payMethod"],
-//                     date: jsonObj[i]["date"],                
-//                     platform: "stockX"
+                var csv = {
+                    brand: jsonObj[i]["item"],
+                    name: jsonObj[i]["name"],
+                    size: jsonObj[i]["size"],
+                    SKU: jsonObj[i]["SKU"],
+                    orderNum: jsonObj[i]["orderNum"],
+                    sellingPrice: jsonObj[i]["sellingPrice"],
+                    totalAfterFees: jsonObj[i]["finalPayout"],
+                    payMethod: jsonObj[i]["payMethod"],
+                    date: jsonObj[i]["date"],                
+                    platform: "stockX"
                     
-//                 };
+                };
 
-//                 finaljson.push(JSON.stringify({
-//                     csv
-//                 }, null, 2).slice(10, (JSON.stringify({
-//                     csv
-//                 }, null, 2).length - 1)));
-//             }
-//             fs.writeFile('stockXcsvConv.json', '[' + finaljson.slice(0, jsonObj.length + 1) + ']', 'utf8');
+                finaljson.push(JSON.stringify({
+                    csv
+                }, null, 2).slice(10, (JSON.stringify({
+                    csv
+                }, null, 2).length - 1)));
+            }
+            fs.writeFile('stockXcsvConv.json', '[' + finaljson.slice(0, jsonObj.length + 1) + ']', 'utf8');
             
-//         });
-// }
+        });
+}
 
 function storeString(){
     const fs = require('fs');
