@@ -45,7 +45,7 @@ function swiftcsvConv() {
 }
 
 function stockXcsvConv() {
-    const filepath = 'stockXtest.csv'
+    const filepath = 'stockX.csv'
     const fs = require('fs');
     const csv = require('csvtojson');
     csv({
@@ -139,5 +139,5 @@ function storeString(){
 
 }
 
-
+//stockXcsvConv();
 storeString();
