@@ -1,14 +1,14 @@
-    const filepath = 'largebasic.json'
-    const fs = require('fs');
+const fs = require('fs');
+let rawdata = fs.readFileSync('largebasic.json');
+function total (rawdata){
     
-    let rawdata = fs.readFileSync('largebasic.json');
     let parsed = JSON.parse(rawdata);
 
-function total (parsed){
     let soldPrice = 0;
     
     for(i = 0; i < parsed.length; i++){
-        soldPrice += parsed[i].soldPrice
+        soldPrice += parsed[i].sale.soldPrice;
+        console.log(parsed[i].sale.soldPrice);
     }
 
     console.log(soldPrice);
