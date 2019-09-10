@@ -99,6 +99,7 @@ function storeString(){
             brand: parsed[i].brand,
             name: parsed[i].name,
             SKU: parsed[i].SKU,
+            retail: "",
             color: "",
             size: parsed[i].size,
             condition: "new",
