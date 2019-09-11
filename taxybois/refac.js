@@ -1,14 +1,15 @@
-const filepath = './brendan.csv';
+    var filepath = './brendan.csv';
     const fs = require('fs');
     const csv = require('csvtojson');
+    var ret = ""; 
 
-function swiftCopConv() {
+function swiftCopConv(a, callback) {
     csv({
         checkType: true,
         noheader: false,
         headers: ['date', 'item', 'size', 'cost', 'sellingPrice', 'platform', 'shippingCost', 'baseFee', 'cashoutFee', 'totalFee', 'totalAfterFees', 'grossIncome', 'profit', '', 'Month']
     })
-        .fromFile(filepath)
+        .fromFile(a)
         .then((jsonObj) => {
             var finaljson = [];
             for (var i = 0; i < jsonObj.length; i++) {
@@ -37,12 +38,19 @@ function swiftCopConv() {
                 }, null, 2).length - 1)));
             }
            
-            //fs.writeFile('swiftcsvConv.json', '[' + finaljson.slice(0, jsonObj.length + 1) + ']', 'utf8');
             
-            var test = [finaljson.slice(0, jsonObj.length + 1)];
-            console.log(test);
-        });
+            
+            var tempdata = '[' + finaljson.slice(0, jsonObj.length + 1) + ']';
 
+            ret = JSON.parse(tempdata);
+            //console.log(ret[1].platform);
+            //console.log(tempdata);
+            return tempdata;
+            
+
+        });
 }
 
+
 swiftCopConv();
+
