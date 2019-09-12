@@ -1,9 +1,9 @@
     var filepath = './brendan.csv';
     const fs = require('fs');
     const csv = require('csvtojson');
-    var ret = ""; 
+    var ret = "f";
 
-function swiftCopConv(a, callback) {
+function swiftCopConv(a) {
     csv({
         checkType: true,
         noheader: false,
@@ -43,14 +43,16 @@ function swiftCopConv(a, callback) {
             var tempdata = '[' + finaljson.slice(0, jsonObj.length + 1) + ']';
 
             ret = JSON.parse(tempdata);
-            //console.log(ret[1].platform);
+            console.log(ret[1].platform);
             //console.log(tempdata);
-            return tempdata;
+            //console.log(ret);
+            
             
 
         });
+        return ret;
 }
 
 
-swiftCopConv();
-
+var blah = swiftCopConv(filepath);
+console.log(blah);
