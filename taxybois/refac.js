@@ -4,7 +4,7 @@
     var ret = "f";
 
 function swiftCopConv(a) {
-    csv({
+     csv({
         checkType: true,
         noheader: false,
         headers: ['date', 'item', 'size', 'cost', 'sellingPrice', 'platform', 'shippingCost', 'baseFee', 'cashoutFee', 'totalFee', 'totalAfterFees', 'grossIncome', 'profit', '', 'Month']
@@ -43,14 +43,14 @@ function swiftCopConv(a) {
             var tempdata = '[' + finaljson.slice(0, jsonObj.length + 1) + ']';
 
             ret = JSON.parse(tempdata);
-            console.log(ret[1].platform);
+            //console.log(ret[1].platform);
             //console.log(tempdata);
             //console.log(ret);
             
-            
+            return 1;
 
         });
-        return ret;
+        
 }
 
 
