@@ -1,7 +1,7 @@
-    var filepath = './brendan.csv';
-    const fs = require('fs');
-    const csv = require('csvtojson');
-    var ret = "f";
+var filepath = './brendan.csv';
+const fs = require('fs');
+const csv = require('csvtojson');
+var ret = "f";
 
 function swiftCopConv(a, callback) {
     csv({
@@ -47,8 +47,8 @@ function swiftCopConv(a, callback) {
             //console.log(tempdata);
             //console.log(ret);
             
-            
-
+        
+        
         });
         return ret;
 }
