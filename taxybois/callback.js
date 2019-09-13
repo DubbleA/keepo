@@ -55,7 +55,7 @@ async function swiftCopConv(a) {
             return ret;
         });
 
-        console.log(ret);
+        //console.log(ret);
         
 }
 
