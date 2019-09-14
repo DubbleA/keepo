@@ -39,21 +39,23 @@ function ifCity(verify){
     if (verify != null || (parsed[i].brand.length != 0)) {
         final = verify;
     }
-    
-    if (verify.indexOf('$') !== -1) {
-        final = verify.replaceAll(/$/g, "");
+    if (verify.indexOf('$') != -1) {
+        final = verify.replace(/\$/g, '');
     }
-    console.log(final);
     return final;
 }
 
 function storeStringswift(parsed) {
     let final = [];
+    var soldPrice = '';
     //console.log(parsed[0].brand);
 
     for (i = 0; i < parsed.length; i++) {
-        //console.log(parsed[i].brand);
-        ifCity(parsed[i].SellingPrice);
+        
+
+        soldPrice = ifCity(parsed[i].SellingPrice);
+
+
         var inventory = {
             category: "",
             brand: parsed[i].brand,
@@ -71,7 +73,7 @@ function storeStringswift(parsed) {
             orderNum: parsed[i].orderNum,
             trackingNum: "",
             saleDate: parsed[i].Date,
-            soldPrice: parsed[i].SellingPrice,
+            soldPrice: soldPrice,
             totalAfterFees: parsed[i].TotalAfterFees,
             notes: ""
         }
@@ -99,4 +101,9 @@ function storeStringswift(parsed) {
     var tempdata = '[' + final.slice(0, parsed.length + 1) + ']';
     fs.writeFile('largebasicf.json', '[' + final.slice(0, parsed.length + 1) + ']', 'utf8');
     return tempdata;
+
 }
+
+//make a different write file function
+//that makes sure you dont add duplicate sales
+//and orders the dates
