@@ -3,18 +3,20 @@ const fs = require('fs');
 const csv = require('csvtojson');
 var ret = "f";
 
-async function swiftCopConv(a) {
+
+function swiftCopConv(a) {
+
     csv({
-        checkType: true,
-        noheader: false,
-        headers: ['date', 'item', 'size', 'cost', 'sellingPrice', 'platform', 'shippingCost', 'baseFee', 'cashoutFee', 'totalFee', 'totalAfterFees', 'grossIncome', 'profit', '', 'Month']
-    })
+            checkType: true,
+            noheader: false,
+            headers: ['date', 'item', 'size', 'cost', 'sellingPrice', 'platform', 'shippingCost', 'baseFee', 'cashoutFee', 'totalFee', 'totalAfterFees', 'grossIncome', 'profit', '', 'Month']
+        })
         .fromFile(a)
         .then((jsonObj) => {
             var finaljson = [];
             for (var i = 0; i < jsonObj.length; i++) {
                 var json = jsonObj[i];
-            
+
                 var csv = {
                     date: jsonObj[i]["date"],
                     item: jsonObj[i]["item"],
@@ -37,16 +39,16 @@ async function swiftCopConv(a) {
                     csv
                 }, null, 2).length - 1)));
             }
-           
-            
-            
+
+
+
             var tempdata = '[' + finaljson.slice(0, jsonObj.length + 1) + ']';
 
             ret = JSON.parse(tempdata);
             console.log(ret[1].platform);
             //console.log(tempdata);
             //console.log(ret);
-            
+
             return ret;
 
         })
@@ -55,8 +57,8 @@ async function swiftCopConv(a) {
             return ret;
         });
 
-        //console.log(ret);
-        
+    //console.log(ret);
+
 }
 
 
