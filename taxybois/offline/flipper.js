@@ -33,29 +33,17 @@ function csvConv(csvFilePath) {
     return finaljson;
 }
 
-function ifCity(parsed, i){
-    let final = [];
-    var item = ''; 
-    var brand= '';
-    var SKU = '';
-    var retail = '';
-        if (parsed[i].Item != null || (parsed[i].brand.length != 0)) {
-            brand = parsed[i].brand;
-            final.push(brand);
-        }
-        if (parsed[i].Item != null || (parsed[i].Item.length != 0)) {
-            item = parsed[i].Item;
-            final.push(item);
-        }
-        if (parsed[i].SKU != null || (parsed[i].SKU.length != 0)) {
-            SKU = parsed[i].SKU;
-            final.push(SKU);
-        }
-        if (parsed[i].retail != null || (parsed[i].retail.length != 0)) {
-            retail = parsed[i].retail;
-            final.push(retail);
-        }
-        console.log(final);
+function ifCity(verify){
+    let final = '';
+    
+    if (verify != null || (parsed[i].brand.length != 0)) {
+        final = verify;
+    }
+    
+    if (verify.indexOf('$') !== -1) {
+        final = verify.replaceAll(/$/g, "");
+    }
+    console.log(final);
     return final;
 }
 
@@ -65,7 +53,7 @@ function storeStringswift(parsed) {
 
     for (i = 0; i < parsed.length; i++) {
         //console.log(parsed[i].brand);
-        //ifCity(parsed, i);
+        ifCity(parsed[i].SellingPrice);
         var inventory = {
             category: "",
             brand: parsed[i].brand,
@@ -109,7 +97,6 @@ function storeStringswift(parsed) {
     }
 
     var tempdata = '[' + final.slice(0, parsed.length + 1) + ']';
-
     fs.writeFile('largebasicf.json', '[' + final.slice(0, parsed.length + 1) + ']', 'utf8');
-
+    return tempdata;
 }
