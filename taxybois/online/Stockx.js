@@ -43,10 +43,19 @@ module.exports = class Stockx {
 
   async getAllSales() {
     let sales = [];
-    //
+    let page = 1;
+    try {
+      while (true) {
+        console.log((await this.getSalePage(page)).length);
+        //sales = sales.concat(sales, await this.getSalePage(page));
+        page++;
+      }
+    } catch (error) {
+      return sales;
+    }
   }
 
-  getSale(page) {
+  getSalePage(page) {
     //Just a warning incase someone fucks up
     if (!this.customerId) {
       console.warn('Please wait for setup to finish before calling this function');
@@ -74,7 +83,6 @@ module.exports = class Stockx {
 
       rp(options)
         .then((response) => {
-          console.log(response)
           response.body.Pagination.total ? resolve(response.body.PortfolioItems) : reject();
         })
         .catch((error) => {
