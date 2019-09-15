@@ -3,11 +3,12 @@ const fs = require('fs');
 
 function main (){
 
-    var bobbert = csvConv('./brendan.csv');
+    var filepath = csvConv('./brendan.csv');
+    var writeto = './largebasic.json';
     //console.log(bobbert);
-    storeStringswift(bobbert);
-
-
+    //storeStringswift(bobbert);
+    var final = writeFile(storeStringswift(filepath), writeto);
+    final = JSON.parse(final);
 
 }
 main();
@@ -29,22 +30,18 @@ function csvConv(csvFilePath) {
         }
 
     }
-
+    //console.log(finaljson[0].Item);
     return finaljson;
 }
 
 function ifCity(verify){
     let final = '';
     
-    if (verify != null) {
-        if (verify.length != 0){
-            final = verify;
-        }
+    if (verify != null && verify.length != 0) {
+        final = verify;
     }
-    if (verify != null) {
-        if (verify.indexOf('$') != -1) {
+    if (verify != null && verify.indexOf('$') != -1) {
         final = verify.replace(/\$/g, '');
-        }
     }   
     return final;
 }
@@ -141,6 +138,7 @@ function storeStringswift(parsed) {
             inventory: inventory,
             sale: sale,
             expense: expense,
+            cside: cside
         };
         final.push(JSON.stringify({
             jso
@@ -148,13 +146,49 @@ function storeStringswift(parsed) {
             jso
         }, null, 2).length - 1)));
     }
-
+    
     var tempdata = '[' + final.slice(0, parsed.length + 1) + ']';
-    fs.writeFile('largebasicf.json', '[' + final.slice(0, parsed.length + 1) + ']', 'utf8');
-    return tempdata;
+    //fs.writeFileSync('testing.json', tempdata, 'utf8');
+    var newdata = JSON.parse(tempdata);
+    //console.log(newdata[2].inventory.name);
+    
+    return newdata;
 
 }
 
-//make a different write file function
-//that makes sure you dont add duplicate sales
-//and orders the dates
+
+function writeFile(newdata, path) {
+    //make a different write file function
+    //that makes sure you dont add duplicate sales
+    //and orders the dates
+
+    final = [];
+
+    if (fs.existsSync(path)) {
+        var currdata = fs.readFileSync('largebasic.json');
+        var cparsed = JSON.parse(currdata);
+
+        //console.log(newdata[2].inventory.name);
+        //console.log(cparsed[2].inventory.name);
+
+
+        var first = JSON.stringify(cparsed);
+        var temp = first.slice(0, -1);
+        var second = JSON.stringify(newdata);
+        var temp2 = second.slice(1);
+
+        final.push(temp);
+        final.push(temp2);
+       
+        fs.writeFile('largebasicNEW.json', final, 'utf8');
+
+        return final;
+    }
+
+    else {
+        //fs.writeFileSync('largebasicf.json', newdata, 'utf8');
+        console.log('else');
+    }
+
+}
+
