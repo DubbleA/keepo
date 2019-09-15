@@ -3,18 +3,12 @@ const fs = require('fs');
 
 function main (){
 
-    //var filepath = csvConv('./brendan.csv');
-    //var writeto = './largebasic.json';
-    //console.log(bobbert);
-    //storeStringswift(bobbert);
-    //var final = writeFile(storeStringswift(csvConv('./brendan.csv')), './largebasic.json');
-    //final = JSON.parse(final);
-
     var csv = './brendan.csv';
     var combineWith = './largebasic.json';
 
     var final = JSON.parse(writeFile(storeStringswift(csvConv(csv)), combineWith));
     console.log(final[4].inventory.name);
+
 }   
 main();
 
@@ -23,7 +17,6 @@ function csvConv(csvFilePath) {
     finaljson = [];
 
     for (var i = 0; i < jsonObj.length; i++) {
-        let j = 0; 
 
         if ( (jsonObj[i].Item.length == 0) || (jsonObj[i].Date.includes('Totals:')) ) {
             // code to skip shit thats blank
@@ -56,7 +49,7 @@ function ifCity(verify){
 }
 
 function storeStringswift(parsed) {
-    let final = [];
+    var final = [];
 
     var category = '';
     var date = '';
@@ -202,7 +195,7 @@ function writeFile(newdata, path) {
 
 }
 
-function cleanup (newdata, filepath) {
+function cleanup (newdata) {
 
     var newfinal = [];
     var parsed = JSON.parse(newdata);
@@ -210,10 +203,13 @@ function cleanup (newdata, filepath) {
     for (i = 0; i < parsed.length; i++) {
         parsed[i].inventory.retail = ifCity(parsed[i].inventory.retail);
         parsed[i].inventory.size = ifCity(parsed[i].inventory.size);
+        parsed[i].inventory.SKU = ifCity(parsed[i].inventory.SKU);
         parsed[i].sale.soldPrice = ifCity(parsed[i].sale.soldPrice);
         parsed[i].sale.totalAfterFees = ifCity(parsed[i].sale.totalAfterFees);
 
     }
+
+    //INSERT A FOR EACH LOOP TO REMOVE ALL DUPLICATES > SEARCHING BY SALE.ORDERNUM
 
     var push = parsed;
     

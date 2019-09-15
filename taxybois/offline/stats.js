@@ -3,17 +3,17 @@ function main (){
     
     var rawdata = fs.readFileSync('largebasicNEW.json');
     var parsed = JSON.parse(rawdata);
-    
-    var final = cleanup(parsed);
+    console.log(total(parsed));
 
+}
 
+function total (parsed) {
+    var rev = 0;
+    for(i = 0; i < parsed.length; i++){
+        rev = rev + Number(parsed[i].sale.soldPrice);
+    }
+    return rev;
 }
 
 main();
 
-
-function cleanup (parsed) {
-
-    
-
-}
