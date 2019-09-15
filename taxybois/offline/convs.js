@@ -3,14 +3,19 @@ const fs = require('fs');
 
 function main (){
 
-    var filepath = csvConv('./brendan.csv');
-    var writeto = './largebasic.json';
+    //var filepath = csvConv('./brendan.csv');
+    //var writeto = './largebasic.json';
     //console.log(bobbert);
     //storeStringswift(bobbert);
-    var final = writeFile(storeStringswift(filepath), writeto);
-    final = JSON.parse(final);
+    //var final = writeFile(storeStringswift(csvConv('./brendan.csv')), './largebasic.json');
+    //final = JSON.parse(final);
 
-}
+    var csv = './brendan.csv';
+    var combineWith = './largebasic.json';
+
+    var final = JSON.parse(writeFile(storeStringswift(csvConv(csv)), combineWith));
+    console.log(final[4].inventory.name);
+}   
 main();
 
 function csvConv(csvFilePath) {
@@ -35,14 +40,18 @@ function csvConv(csvFilePath) {
 }
 
 function ifCity(verify){
-    let final = '';
-    
+    var final = '';
+        
     if (verify != null && verify.length != 0) {
-        final = verify;
+        final = verify.toString();
     }
-    if (verify != null && verify.indexOf('$') != -1) {
+    if (verify != null && isNaN(verify) != true) {
+        final = verify.toString();
+    }
+    if (verify != null && final.indexOf('$') != -1) {
         final = verify.replace(/\$/g, '');
     }   
+
     return final;
 }
 
@@ -163,15 +172,10 @@ function writeFile(newdata, path) {
     //and orders the dates
 
     final = [];
-
+    
     if (fs.existsSync(path)) {
-        var currdata = fs.readFileSync('largebasic.json');
+        var currdata = fs.readFileSync(path);
         var cparsed = JSON.parse(currdata);
-
-        //console.log(newdata[2].inventory.name);
-        //console.log(cparsed[2].inventory.name);
-
-
         var first = JSON.stringify(cparsed);
         var temp = first.slice(0, -1);
         var second = JSON.stringify(newdata);
@@ -179,8 +183,14 @@ function writeFile(newdata, path) {
 
         final.push(temp);
         final.push(temp2);
-       
-        fs.writeFile('largebasicNEW.json', final, 'utf8');
+
+        final = cleanup(final);
+        //test = JSON.stringify(test);
+        
+        fs.writeFileSync('largebasicNEW.json', final, 'utf8');
+        
+
+
 
         return final;
     }
@@ -190,5 +200,31 @@ function writeFile(newdata, path) {
         console.log('else');
     }
 
+}
+
+function cleanup (newdata, filepath) {
+
+    var newfinal = [];
+    var parsed = JSON.parse(newdata);
+
+    for (i = 0; i < parsed.length; i++) {
+        parsed[i].inventory.retail = ifCity(parsed[i].inventory.retail);
+        parsed[i].inventory.size = ifCity(parsed[i].inventory.size);
+        parsed[i].sale.soldPrice = ifCity(parsed[i].sale.soldPrice);
+        parsed[i].sale.totalAfterFees = ifCity(parsed[i].sale.totalAfterFees);
+
+    }
+
+    var push = parsed;
+    
+    
+    push = JSON.stringify(push);
+    push = push.slice(1);
+    push = push.slice(0,-1);
+    //push = JSON.parse(push);
+    newfinal.push(push);
+
+    
+    return ('[' + newfinal + ']');
 }
 
