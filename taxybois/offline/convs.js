@@ -186,7 +186,7 @@ function writeFile(newdata, path) {
     }
 
     else {
-        //fs.writeFileSync('largebasicf.json', newdata, 'utf8');
+        fs.writeFileSync('NEWlargebasicf.json', JSON.stringify(newdata), 'utf8');
         console.log('else');
     }
 
