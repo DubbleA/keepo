@@ -158,6 +158,226 @@ function storeStringswift(parsed) {
 
 }
 
+function storeStringswift(parsed) {
+    var final = [];
+
+    var category = '';
+    var date = '';
+    var brand = '';
+    var name = '';
+    var SKU = '';
+    var retail = '';
+    var shippingCost = '';
+    var color = '';
+    var size = '';
+    var condition = '';
+    var notes = '';
+
+    var market = "";
+    var orderNum = "";
+    var trackingNum = "";
+    var saleDate = "";
+    var soldPrice = "";
+    var totalAfterFees = "";
+    var notes = "";
+
+
+    //console.log(parsed[0].brand);
+
+    for (i = 0; i < parsed.length; i++) {
+
+        category = ifCity(parsed[i].category);
+        date = ifCity(parsed[i].Date);
+        brand = ifCity(parsed[i].brand);
+        name = ifCity(parsed[i].Item);
+        SKU = ifCity(parsed[i].SKU);
+        retail = ifCity(parsed[i].Cost);
+        shippingCost = ifCity(parsed[i].Shipping);
+        color = ifCity(parsed[i].color);
+        size = ifCity(parsed[i].Size);
+        condition = ifCity(parsed[i].condition);
+        notes = ifCity(parsed[i].notes);
+
+        market = ifCity(parsed[i].Platform);
+        orderNum = ifCity(parsed[i].orderNum);
+        trackingNum = ifCity(parsed[i].trackingNum);
+        saleDate = ifCity(parsed[i].saleDate);
+        soldPrice = ifCity(parsed[i].SellingPrice);
+        totalAfterFees = ifCity(parsed[i].TotalAfterFees);
+        notes = ifCity(parsed[i].notes);
+
+
+
+
+        var inventory = {
+            category: category,
+            date: date,
+            brand: brand,
+            name: name,
+            SKU: SKU,
+            retail: retail,
+            shippingCost: shippingCost,
+            color: color,
+            size: size,
+            condition: condition,
+            notes: notes
+        }
+        var sale = {
+            market: market,
+            orderNum: orderNum,
+            trackingNum: trackingNum,
+            saleDate: saleDate,
+            soldPrice: soldPrice,
+            totalAfterFees: totalAfterFees,
+            notes: notes
+        }
+        var expense = {
+            expenseName: "",
+            expensePrice: "",
+            expenseReason: "",
+            expenseDateStart: "",
+            expenseOccurance: "",
+            expenseEnded: "",
+            expenseNotes: ""
+        }
+        var cside = {
+            customerId: '',
+            pic: '',
+            itemId: '',
+            currentLowestAsk: '',
+        }
+        var jso = {
+            inventory: inventory,
+            sale: sale,
+            expense: expense,
+            cside: cside
+        };
+        final.push(JSON.stringify({
+            jso
+        }, null, 2).slice(10, (JSON.stringify({
+            jso
+        }, null, 2).length - 1)));
+    }
+
+    var tempdata = '[' + final.slice(0, parsed.length + 1) + ']';
+    //fs.writeFileSync('testing.json', tempdata, 'utf8');
+    var newdata = JSON.parse(tempdata);
+    //console.log(newdata[2].inventory.name);
+
+    return newdata;
+
+}
+
+function storeStringswift(parsed) {
+    var final = [];
+
+    var category = '';
+    var date = '';
+    var brand = '';
+    var name = '';
+    var SKU = '';
+    var retail = '';
+    var shippingCost = '';
+    var color = '';
+    var size = '';
+    var condition = '';
+    var notes = '';
+
+    var market = "";
+    var orderNum = "";
+    var trackingNum = "";
+    var saleDate = "";
+    var soldPrice = "";
+    var totalAfterFees = "";
+    var notes = "";
+
+
+    //console.log(parsed[0].brand);
+
+    for (i = 0; i < parsed.length; i++) {
+
+        category = ifCity(parsed[i].category);
+        date = ifCity(parsed[i].Date);
+        brand = ifCity(parsed[i].brand);
+        name = ifCity(parsed[i].Item);
+        SKU = ifCity(parsed[i].SKU);
+        retail = ifCity(parsed[i].Cost);
+        shippingCost = ifCity(parsed[i].Shipping);
+        color = ifCity(parsed[i].color);
+        size = ifCity(parsed[i].Size);
+        condition = ifCity(parsed[i].condition);
+        notes = ifCity(parsed[i].notes);
+
+        market = ifCity(parsed[i].Platform);
+        orderNum = ifCity(parsed[i].orderNum);
+        trackingNum = ifCity(parsed[i].trackingNum);
+        saleDate = ifCity(parsed[i].saleDate);
+        soldPrice = ifCity(parsed[i].SellingPrice);
+        totalAfterFees = ifCity(parsed[i].TotalAfterFees);
+        notes = ifCity(parsed[i].notes);
+
+
+
+
+        var inventory = {
+            category: category,
+            date: date,
+            brand: brand,
+            name: name,
+            SKU: SKU,
+            retail: retail,
+            shippingCost: shippingCost,
+            color: color,
+            size: size,
+            condition: condition,
+            notes: notes
+        }
+        var sale = {
+            market: market,
+            orderNum: orderNum,
+            trackingNum: trackingNum,
+            saleDate: saleDate,
+            soldPrice: soldPrice,
+            totalAfterFees: totalAfterFees,
+            notes: notes
+        }
+        var expense = {
+            expenseName: "",
+            expensePrice: "",
+            expenseReason: "",
+            expenseDateStart: "",
+            expenseOccurance: "",
+            expenseEnded: "",
+            expenseNotes: ""
+        }
+        var cside = {
+            customerId: '',
+            pic: '',
+            itemId: '',
+            currentLowestAsk: '',
+        }
+        var jso = {
+            inventory: inventory,
+            sale: sale,
+            expense: expense,
+            cside: cside
+        };
+        final.push(JSON.stringify({
+            jso
+        }, null, 2).slice(10, (JSON.stringify({
+            jso
+        }, null, 2).length - 1)));
+    }
+
+    var tempdata = '[' + final.slice(0, parsed.length + 1) + ']';
+    //fs.writeFileSync('testing.json', tempdata, 'utf8');
+    var newdata = JSON.parse(tempdata);
+    //console.log(newdata[2].inventory.name);
+
+    return newdata;
+
+}
+
 
 function writeFile(newdata, path) {
     //make a different write file function
