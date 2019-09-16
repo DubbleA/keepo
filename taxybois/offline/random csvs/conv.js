@@ -135,7 +135,7 @@ function storeString(){
         }, null, 2).length - 1)));
     }
 
-    fs.writeFile('largebasic.json', '[' + final.slice(0, parsed.length + 1) + ']', 'utf8');
+    fs.writeFile('NEWlargebasic.json', '[' + final.slice(0, parsed.length + 1) + ']', 'utf8');
 
 
 }

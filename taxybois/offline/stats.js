@@ -1,34 +1,25 @@
-
-function totalStockX (){
-    const fs = require('fs');
-    let rawdata = fs.readFileSync('largebasic.json');
-    let parsed = JSON.parse(rawdata);
-
-    let soldPrice = 0;
+const fs = require('fs');
+function main (){
     
+    var rawdata = fs.readFileSync('largebasicNEW.json');
+    var parsed = JSON.parse(rawdata);
+    console.log(total(parsed));
+
+}
+
+function total (parsed) {
+    var rev = 0;
+    var taf = 0;
+    var counter = 0;
     for(i = 0; i < parsed.length; i++){
-        soldPrice += parsed[i].sale.soldPrice;
-        console.log(parsed[i].sale.soldPrice);
+        rev = rev + Number(parsed[i].sale.soldPrice);
+        taf = taf + Number(parsed[i].sale.totalAfterFees);
+        counter++;
     }
-
-    console.log(soldPrice);
-    
-
+    console.log(taf);
+    console.log(counter);
+    return rev;
 }
 
-function testStockX(){
-    const fs = require('fs');
-    let rawdata = fs.readFileSync('largebasic.json');
-    let parsed = JSON.parse(rawdata);
-    for(i=0;i<parsed.length;i++){
-        if (parsed[i].sale.market == "stockX"){
-            console.log("bobbo")
-        }
-        else{
-            console.log("not bobbotebto")
-        }
-    }
-    
-}
-testStockX();
-totalStockX();
+main();
+
