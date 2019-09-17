@@ -41,22 +41,22 @@ module.exports = class Stockx {
     });
   }
 
-  async getAllSales() {
-    //Just a warning incase someone fucks up
-    if (!this.customerId) {
-      console.warn('Please wait for setup to finish before calling this function');
-      return;
-    }    
-    let sales = [];
-    let page = 1;
-    let max = 2;
-    while (page <= max) {
-      console.log((await this.getSalePage(page)).length);
-      //sales = sales.concat(sales, await this.getSalePage(page));
-      page++;
-    }
-    return sales;
-  }
+  // async getAllSales() {
+  //   //Just a warning incase someone fucks up
+  //   if (!this.customerId) {
+  //     console.warn('Please wait for setup to finish before calling this function');
+  //     return;
+  //   }    
+  //   let sales = [];
+  //   let page = 1;
+  //   let max = 2;
+  //   while (page <= max) {
+  //     console.log((await this.getSalePage(page)).length);
+  //     //sales = sales.concat(sales, await this.getSalePage(page));
+  //     page++;
+  //   }
+  //   return sales;
+  // }
 
   getSalePage(page) {
     //Just a warning incase someone fucks up
@@ -100,9 +100,6 @@ module.exports = class Stockx {
       let options = {
         url : `https://xw7sbct9v6-2.algolianet.com/1/indexes/products`,
         method: 'GET',
-        // headers: {
-        //   'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
-        // },
         qs: {
           'x-algolia-agent': 'Algolia for vanilla JavaScript 3.32.1',
           'x-algolia-application-id': 'XW7SBCT9V6',
@@ -117,7 +114,7 @@ module.exports = class Stockx {
 
       rp(options)
         .then((response) => {
-          resolve(response);
+          resolve(response.body.hits);
         })
         .catch((error) => {
           console.log(error);
