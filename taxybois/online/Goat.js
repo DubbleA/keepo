@@ -36,7 +36,7 @@ module.exports = class Goat {
         });
     }
 
-    //returns array of items - need to finish
+    //returns array of items
     async getAllSales() {
         //just a warning incase someone fucks up
         if (!this.authToken) {
