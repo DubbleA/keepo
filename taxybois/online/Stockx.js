@@ -1,10 +1,11 @@
 const rp = require('request-promise');
-var cookieJar = rp.jar();
+let cookieJar = rp.jar();
 
 module.exports = class Stockx {
   //fucking does nothing lmao
   constructor() {}
 
+  //returns nothing
   authenticate(username, password) {
     return new Promise((resolve, reject) => {
       let options = {
@@ -41,25 +42,9 @@ module.exports = class Stockx {
     });
   }
 
-  // async getAllSales() {
-  //   //Just a warning incase someone fucks up
-  //   if (!this.customerId) {
-  //     console.warn('Please wait for setup to finish before calling this function');
-  //     return;
-  //   }    
-  //   let sales = [];
-  //   let page = 1;
-  //   let max = 2;
-  //   while (page <= max) {
-  //     console.log((await this.getSalePage(page)).length);
-  //     //sales = sales.concat(sales, await this.getSalePage(page));
-  //     page++;
-  //   }
-  //   return sales;
-  // }
-
+  //returns array of items
   getSalePage(page) {
-    //Just a warning incase someone fucks up
+    //just a warning incase someone fucks up
     if (!this.customerId) {
       console.warn('Please wait for setup to finish before calling this function');
       return;
@@ -86,6 +71,7 @@ module.exports = class Stockx {
 
       rp(options)
         .then((response) => {
+          //throws rejection if theres no items on that page
           response.body.Pagination.total ? resolve(response.body.PortfolioItems) : reject();
         })
         .catch((error) => {
@@ -95,6 +81,7 @@ module.exports = class Stockx {
     });
   }
 
+  //returns array of items
   search(searchTerm) {
     return new Promise((resolve, reject) => {
       let options = {

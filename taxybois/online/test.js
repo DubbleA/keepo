@@ -1,9 +1,9 @@
 const Stockx = require('./Stockx.js');
-let oof = new Stockx()
+let oof = new Stockx();
 oof.authenticate('Aaryan.gupta158@gmail.com', 'NigerianPrince1!')
     .then(async () => {
         let results = await oof.search('nike');
-        console.log(results);
+        console.log(await oof.getSalePage(1));
     })
     .catch(error => {
         console.log('lmao i fucked up big time');
