@@ -24,8 +24,13 @@ module.exports = class Stats {
         console.log(counter);
         return rev;
     }
+
+    
+
+
 }
 
 
 
 //cant call funtion inside own class without putting this. before it
+//ADD CAPTCHA SUPPORT IN CASE ONE POPS UP
