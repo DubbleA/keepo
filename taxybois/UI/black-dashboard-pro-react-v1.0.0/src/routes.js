@@ -45,120 +45,52 @@ import Lock from "views/pages/Lock.jsx";
 
 const routes = [
   {
-    path: "/dashboard",
-    name: "Dashboard",
-    rtlName: "لوحة القيادة",
-    icon: "tim-icons icon-chart-pie-36",
-    component: Dashboard,
-    layout: "/admin"
-  },
-  {
     collapse: true,
-    name: "Pages",
-    rtlName: "صفحات",
-    icon: "tim-icons icon-image-02",
-    state: "pagesCollapse",
-    views: [
-      {
-        path: "/pricing",
-        name: "Pricing",
-        rtlName: "عالتسعير",
-        mini: "P",
-        rtlMini: "ع",
-        component: Pricing,
-        layout: "/auth"
-      },
-      {
-        path: "/rtl-support",
-        name: "RTL Support",
-        rtlName: "صودعم رتل",
-        mini: "RS",
-        rtlMini: "صو",
-        component: Rtl,
-        layout: "/rtl"
-      },
-      {
-        path: "/timeline",
-        name: "Timeline",
-        rtlName: "تيالجدول الزمني",
-        mini: "T",
-        rtlMini: "تي",
-        component: Timeline,
-        layout: "/admin"
-      },
-      {
-        path: "/login",
-        name: "Login",
-        rtlName: "هعذاتسجيل الدخول",
-        mini: "L",
-        rtlMini: "هعذا",
-        component: Login,
-        layout: "/auth"
-      },
-      {
-        path: "/register",
-        name: "Register",
-        rtlName: "تسجيل",
-        mini: "R",
-        rtlMini: "صع",
-        component: Register,
-        layout: "/auth"
-      },
-      {
-        path: "/lock-screen",
-        name: "Lock Screen",
-        rtlName: "اقفل الشاشة",
-        mini: "LS",
-        rtlMini: "هذاع",
-        component: Lock,
-        layout: "/auth"
-      },
-      {
-        path: "/user-profile",
-        name: "User Profile",
-        rtlName: "ملف تعريفي للمستخدم",
-        mini: "UP",
-        rtlMini: "شع",
-        component: User,
-        layout: "/admin"
-      }
-    ]
-  },
-  {
-    collapse: true,
-    name: "Components",
-    rtlName: "المكونات",
+    name: "Finance",
+    rtlName: "",
     icon: "tim-icons icon-molecule-40",
     state: "componentsCollapse",
     views: [
       {
+        path: "/dashboard",
+        name: "Dashboard",
+        rtlName: "وصفت",
+        mini: "D",
+        rtlMini: "ب",
+        component: Dashboard, //the important part
+        layout: "/admin"
+      },
+      {
         collapse: true,
-        name: "Multi Level Collapse",
+        name: "Sales",
         rtlName: "انهيار متعدد المستويات",
-        mini: "MLT",
+        mini: "Sa",
         rtlMini: "ر",
         state: "multiCollapse",
         views: [
           {
-            path: "/buttons",
-            name: "Buttons",
+            path: "/manage", //upload and sync accounts 
+            name: "Manage",
             rtlName: "وصفت",
-            mini: "B",
+            mini: "S",
             rtlMini: "ب",
             component: Buttons,
             layout: "/admin"
-          }
+          },
+          {
+            path: "/Sync", //upload and sync accounts 
+            name: "Sync",
+            rtlName: "وصفت",
+            mini: "S",
+            rtlMini: "ب",
+            component: Buttons,
+            layout: "/admin"
+          },
+          
+
         ]
       },
-      {
-        path: "/buttons",
-        name: "Buttons",
-        rtlName: "وصفت",
-        mini: "B",
-        rtlMini: "ب",
-        component: Buttons,
-        layout: "/admin"
-      },
+      
       {
         path: "/grid-system",
         name: "Grid System",
@@ -205,11 +137,11 @@ const routes = [
         layout: "/admin"
       },
       {
-        path: "/typography",
-        name: "Typography",
-        rtlName: "طباعة",
-        mini: "T",
-        rtlMini: "ر",
+        path: "/settings",
+        name: "Settings",
+        rtlName: "",
+        mini: "S",
+        rtlMini: "",
         component: Typography,
         layout: "/admin"
       }
@@ -292,42 +224,6 @@ const routes = [
         mini: "RT",
         rtlMini: "در",
         component: ReactTables,
-        layout: "/admin"
-      }
-    ]
-  },
-  {
-    collapse: true,
-    name: "Maps",
-    rtlName: "خرائط",
-    icon: "tim-icons icon-pin",
-    state: "mapsCollapse",
-    views: [
-      {
-        path: "/google-maps",
-        name: "Google Maps",
-        rtlName: "خرائط جوجل",
-        mini: "GM",
-        rtlMini: "زم",
-        component: GoogleMaps,
-        layout: "/admin"
-      },
-      {
-        path: "/full-screen-map",
-        name: "Full Screen Map",
-        rtlName: "خريطة كاملة الشاشة",
-        mini: "FSM",
-        rtlMini: "ووم",
-        component: FullScreenMap,
-        layout: "/admin"
-      },
-      {
-        path: "/vector-map",
-        name: "Vector Map",
-        rtlName: "خريطة المتجه",
-        mini: "VM",
-        rtlMini: "تم",
-        component: VectorMap,
         layout: "/admin"
       }
     ]
