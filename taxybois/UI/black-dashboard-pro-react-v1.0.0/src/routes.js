@@ -19,6 +19,8 @@ import Expenses from "views/manager/expenses.jsx";
 import Inventory from "views/manager/inventory.jsx";
 import Sales from "views/manager/sales.jsx";
 
+import Settings from "views/widgets/settings.jsx";
+
 import ReactTables from "views/tables/ReactTables.jsx";
 import RegularTables from "views/tables/RegularTables.jsx";
 import ExtendedTables from "views/tables/ExtendedTables.jsx";
@@ -193,7 +195,7 @@ const routes = [
         name: "Settings",
         rtlName: "الحاجيات",
         mini: "ET",
-        component: Widgets,
+        component: Settings,
         layout: "/admin"
       },
       {
