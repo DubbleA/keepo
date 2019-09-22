@@ -16,7 +16,10 @@
 //     console.log(bob[7].inventory.name);
 // }   
 // main();
-
+const fs = require('fs');
 const stats = require('./stats.js');
-var stats = new stats();
-stats.total();
+var stat = new stats();
+var rawdata = fs.readFileSync('./bigbasicNEW.json');
+var parsed = JSON.parse(rawdata);
+//console.log(total(parsed));
+stat.total(parsed);

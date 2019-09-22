@@ -1,4 +1,4 @@
-const fs = require('fs');
+
 
 
 
@@ -15,6 +15,7 @@ module.exports = class Stats {
         var rev = 0;
         var taf = 0;
         var counter = 0;
+        var i = 0;
         for(i = 0; i < parsed.length; i++){
             rev = rev + Number(parsed[i].sale.soldPrice);
             taf = taf + Number(parsed[i].sale.totalAfterFees);
