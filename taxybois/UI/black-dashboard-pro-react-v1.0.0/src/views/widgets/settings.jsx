@@ -28,6 +28,7 @@ import {
     CardFooter,
     CardImg,
     CardTitle,
+    CardText,
     DropdownToggle,
     DropdownMenu,
     DropdownItem,
@@ -49,7 +50,15 @@ class Settings extends React.Component {
             <>
                 <div className="content">
                     <Row>
-                        
+                        <Col md="6">
+                            <Card style={{ width: '40rem' }}>
+                                <CardBody>
+                                    <CardTitle>Add Accounts</CardTitle>
+                                    <CardText></CardText>
+                                    <Button href="/#" color="">Go somewhere</Button>
+                                </CardBody>
+                            </Card>
+                        </Col>
                     </Row>
                 </div>
             </>
