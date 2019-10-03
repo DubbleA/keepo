@@ -97,15 +97,15 @@ module.exports = class Stockx {
     search(searchTerm) {
         return new Promise((resolve, reject) => {
             let options = {
-                url : `https://xw7sbct9v6-2.algolianet.com/1/indexes/products`,
-                method: 'GET',
+                url : 'https://xw7sbct9v6-2.algolianet.com/1/indexes/products/query',
+                method: 'POST',
                 qs: {
                     'x-algolia-agent': 'Algolia for vanilla JavaScript 3.32.1',
                     'x-algolia-application-id': 'XW7SBCT9V6',
                     'x-algolia-api-key': '6bfb5abee4dcd8cea8f0ca1ca085c2b3'
                 },
-                formData: {
-                    params: `"query="${searchTerm}&facets=*&filters=""`
+                body: {
+                    params: `query=${searchTerm}&facets=*&filters=`,
                 },
                 resolveWithFullResponse : true,
                 json: true,
