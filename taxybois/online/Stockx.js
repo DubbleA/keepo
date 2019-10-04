@@ -105,7 +105,7 @@ module.exports = class Stockx {
                     'x-algolia-api-key': '6bfb5abee4dcd8cea8f0ca1ca085c2b3'
                 },
                 body: {
-                    params: `query=${searchTerm}&facets=*&filters=`,
+                    params: `query=${encodeURIComponent(searchTerm)}&facets=*&filters=`,
                 },
                 resolveWithFullResponse : true,
                 json: true,
