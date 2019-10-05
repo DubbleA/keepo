@@ -3,6 +3,10 @@ var randomMobile = require('random-mobile');
 var randomFullName = require('random-fullName');
 
 
+//gotta make that query where we temp store these and if we gen cards profiles etc, it just generates new profiles. 
+
+//have a feature where you just input how many profiles you want to generate, and for how many bots. Then it outputs the new json for those bots
+
 module.exports = class tools {
 
     constructor() {}
