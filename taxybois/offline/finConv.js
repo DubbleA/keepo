@@ -1,5 +1,6 @@
 
-
+const csvToJson = require('convert-csv-to-json');
+const fs = require('fs');
 
 module.exports = class finConv {
 
@@ -26,6 +27,26 @@ module.exports = class finConv {
 
     SGinvConv(csv, combineWith) {
         return JSON.parse(this.writeFile(this.storeStringSGinv(this.csvConvSG(csv)), combineWith));
+    }
+
+    csvConv(csvFilePath){
+        var jsonObj = csvToJson.fieldDelimiter(',').getJsonFromCsv(csvFilePath);
+        finaljson = [];
+
+        for (var i = 0; i < jsonObj.length; i++) {
+
+            if ( !(jsonObj[i] == undefined && (jsonObj[i].Item.length == 0) && (jsonObj[i].Date.includes('Totals:'))) ) {
+                // code to skip shit thats blank
+                finaljson.push(jsonObj[i]);
+
+            } else {
+                //finaljson.push(jsonObj[i]);
+                //console.log(jsonObj[i])
+            }
+
+        }
+        //console.log(finaljson[0].Item);
+        return finaljson;
     }
 
     csvConvSwift(csvFilePath) {

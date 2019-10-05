@@ -16,6 +16,9 @@
 //     console.log(bob[7].inventory.name);
 // }   
 // main();
+
+
+
 const fs = require('fs');
 const stats = require('./stats.js');
 var stat = new stats();
@@ -23,3 +26,9 @@ var rawdata = fs.readFileSync('./bigbasicNEW.json');
 var parsed = JSON.parse(rawdata);
 //console.log(total(parsed));
 stat.total(parsed);
+
+
+var finConv = new finConv();
+var fpath = './brendan.csv';
+var news = finConv.csvConv(fpath);
+console.log(news);

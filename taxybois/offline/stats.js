@@ -21,11 +21,11 @@ module.exports = class Stats {
             taf = taf + Number(parsed[i].sale.totalAfterFees);
             counter++;
         }
-        console.log(taf);
-        console.log(counter);
+        //console.log(taf);
+        //console.log(counter);
         return rev;
     }
-
+    
     
 
 
