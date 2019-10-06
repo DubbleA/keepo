@@ -11,6 +11,7 @@
 // }
 
 module.exports = class Stats {
+    constructor() {}
     total(parsed) {
         var rev = 0;
         var taf = 0;
@@ -23,7 +24,7 @@ module.exports = class Stats {
         }
         //console.log(taf);
         //console.log(counter);
-        return rev;
+        return taf;
     }
     
     

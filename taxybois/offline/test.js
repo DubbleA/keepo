@@ -25,10 +25,16 @@ var stat = new stats();
 var rawdata = fs.readFileSync('./bigbasicNEW.json');
 var parsed = JSON.parse(rawdata);
 //console.log(total(parsed));
-stat.total(parsed);
+var taf = stat.total(parsed);
+//console.log(taf);
 
-
-var finConv = new finConv();
+const fConv = require("./fConv.js");
+var finConv = new fConv();
+//var finConv = new finConv();
 var fpath = './brendan.csv';
 var news = finConv.csvConv(fpath);
-console.log(news);
+//console.log(news);
+
+
+var jeff = JSON.parse(finConv.writeNewFile(finConv.storeStringSwift(finConv.csvConv(fpath))));
+console.log(jeff[3].inventory.name);

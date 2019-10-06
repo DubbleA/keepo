@@ -1,4 +1,3 @@
-
 const csvToJson = require('convert-csv-to-json');
 const fs = require('fs');
 
@@ -29,13 +28,13 @@ module.exports = class finConv {
         return JSON.parse(this.writeFile(this.storeStringSGinv(this.csvConvSG(csv)), combineWith));
     }
 
-    csvConv(csvFilePath){
+    csvConv(csvFilePath) {
         var jsonObj = csvToJson.fieldDelimiter(',').getJsonFromCsv(csvFilePath);
         finaljson = [];
 
         for (var i = 0; i < jsonObj.length; i++) {
 
-            if ( !(jsonObj[i] == undefined && (jsonObj[i].Item.length == 0) && (jsonObj[i].Date.includes('Totals:'))) ) {
+            if (!(jsonObj[i] == undefined && (jsonObj[i].Item.length == 0) && (jsonObj[i].Date.includes('Totals:')))) {
                 // code to skip shit thats blank
                 finaljson.push(jsonObj[i]);
 
@@ -562,7 +561,7 @@ module.exports = class finConv {
 
 
 
-    formatter(category, date, brand, name, SKU, retail, shippingCost, color, size, condition, notes, market, orderNum, trackingNum, saleDate, soldPrice, totalAfterFees, notes, expenseName, expensePrice, expenseReason, expenseDateStart, expenseOccurance, expenseEnded, expenseNotes, customerId, pic, itemId, currentLowestAsk) {
+    formatter(category, date, brand, name, SKU, retail, shippingCost, color, size, condition, notes, market, orderNum, trackingNum, saleDate, soldPrice, totalAfterFees, saleNotes, expenseName, expensePrice, expenseReason, expenseDateStart, expenseOccurance, expenseEnded, expenseNotes, customerId, pic, itemId, currentLowestAsk) {
         var inventory = {
             category: category,
             date: date,
@@ -583,7 +582,7 @@ module.exports = class finConv {
             saleDate: saleDate,
             soldPrice: soldPrice,
             totalAfterFees: totalAfterFees,
-            notes: notes
+            notes: saleNotes
         }
         var expense = {
             expenseName: expenseName,

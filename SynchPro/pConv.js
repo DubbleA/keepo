@@ -2,7 +2,7 @@ const csvToJson = require('convert-csv-to-json');
 const fs = require('fs');
 
 
-module.exports = class proConv {
+module.exports = class pConv {
 
     constructor() {}
     
