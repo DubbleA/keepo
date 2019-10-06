@@ -4,39 +4,19 @@ const fs = require('fs');
 module.exports = class fConv {
 constructor() {}
 
-swiftConv(csv, combineWith) {
-    return JSON.parse(writeFile(storeStringSwift(csvConv(csv)), combineWith));
-}
-stockXConv(csv, combineWith) {
-    return JSON.parse(this.writeFile(this.storeStringStockX(this.csvConv(csv)), combineWith));
-}
-
-FCSaleConv(csv, combineWith) {
-    return JSON.parse(this.writeFile(this.storeStringFCSale(this.csvConv(csv)), combineWith));
-}
-
-FCinvConv(csv, combineWith) {
-    return JSON.parse(this.writeFile(this.storeStringFCinv(this.csvConv(csv)), combineWith));
-}
-
-SGSaleConv(csv, combineWith) {
-    return JSON.parse(this.writeFile(this.storeStringSGSale(this.csvConv(csv)), combineWith));
-}
-
-SGinvConv(csv, combineWith) {
-    return JSON.parse(this.writeFile(this.storeStringSGinv(this.csvConv(csv)), combineWith));
-}
-
 csvConv(csvFilePath) {
     var jsonObj = csvToJson.fieldDelimiter(',').getJsonFromCsv(csvFilePath);
     var finaljson = [];
 
-    for (var i = 0; i < jsonObj.length; i++) {
+    for (let i = 0; i < jsonObj.length; i++) {
 
-        if (!(jsonObj[i] == undefined) && !(jsonObj[i].Item.length == 0) && !(jsonObj[i].Date.includes('Totals:'))) {
+        if (!(jsonObj[i] == undefined) && !(jsonObj[i].hasOwnProperty('Date')) && !(jsonObj[i].hasOwnProperty('Item'))) {
             
             finaljson.push(jsonObj[i]);
 
+        }
+        else if ((jsonObj[i].hasOwnProperty('Date')) && (jsonObj[i].hasOwnProperty('Item')) && !(jsonObj[i].Item.length == 0) && !(jsonObj[i].Date.includes('Totals:'))) {
+            finaljson.push(jsonObj[i]);
         }
 
     }
@@ -155,7 +135,7 @@ storeStringStockX(parsed) {
     var currentLowestAsk = "";
 
 
-    for (i = 0; i < parsed.length; i++) {
+    for (let i = 0; i < parsed.length; i++) {
 
         //category = ifCity(parsed[i].category);
         date = this.ifCity(parsed[i]['"SaleDate"']);
@@ -226,7 +206,7 @@ storeStringFCSale(parsed) {
     var currentLowestAsk = "";
 
 
-    for (i = 0; i < parsed.length; i++) {
+    for (let i = 0; i < parsed.length; i++) {
 
         //category = ifCity(parsed[i].category);
         date = this.ifCity(parsed[i].DATEIN);
@@ -297,7 +277,7 @@ storeStringFCinv(parsed) {
     var currentLowestAsk = "";
 
 
-    for (i = 0; i < parsed.length; i++) {
+    for (let i = 0; i < parsed.length; i++) {
 
         //category = ifCity(parsed[i].category);
         date = this.ifCity(parsed[i].DATEIN);
@@ -368,7 +348,7 @@ storeStringSGSale(parsed) {
     var currentLowestAsk = "";
 
 
-    for (i = 0; i < parsed.length; i++) {
+    for (let i = 0; i < parsed.length; i++) {
 
         category = this.ifCity(parsed[i].category);
         date = this.ifCity(parsed[i].IntakeDate);
@@ -439,7 +419,7 @@ storeStringSGinv(parsed) {
     var currentLowestAsk = "";
 
 
-    for (i = 0; i < parsed.length; i++) {
+    for (let i = 0; i < parsed.length; i++) {
 
         //category = ifCity(parsed[i].category);
         date = this.ifCity(parsed[i].IntakeDate);
@@ -591,7 +571,7 @@ cleanup(newdata) {
     var newfinal = [];
     var parsed = JSON.parse(newdata);
 
-    for (i = 0; i < parsed.length; i++) {
+    for (let i = 0; i < parsed.length; i++) {
         parsed[i].inventory.retail = this.ifCity(parsed[i].inventory.retail);
         parsed[i].inventory.size = this.ifCity(parsed[i].inventory.size);
         parsed[i].inventory.SKU = this.ifCity(parsed[i].inventory.SKU);
