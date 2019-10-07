@@ -56,6 +56,15 @@ class Settings extends React.Component {
                                     <CardTitle>Add Accounts</CardTitle>
                                     <CardText></CardText>
                                     <Button href="/#" color="">Go somewhere</Button>
+
+
+                                    <Col md="4" sm="5">
+                                        <Button color="facebook">
+                                            <i className="fab fa-facebook-square" /> Share · 2.2k
+                                    </Button>
+                                    </Col>
+
+
                                 </CardBody>
                             </Card>
                         </Col>
