@@ -10202,6 +10202,47 @@ fieldset[disabled]
     .btn.btn-facebook.btn-neutral:hover, .btn.btn-facebook.btn-neutral:focus, .btn.btn-facebook.btn-neutral:active {
       color: #344e86; }
 
+.btn.btn-stockX {
+  background: #3eb049;
+  background-image: linear-gradient(to bottom left, #3b985f, #1e2e4f, #3eb049);
+  background-size: 180% 210%;
+  background-position: top right;
+  color: #ffffff;
+  background-size: 180% 210%;
+  background-position: top right;
+  background-repeat: space;
+}
+
+.btn.btn-stockX:focus,
+.btn.btn-stockX:active,
+.btn.btn-stockX:hover {
+  background-color: #344e86;
+  background-image: linear-gradient(to bottom left, #3eb049, #173f1e, #3eb049) !important;
+  background-image: -moz-linear-gradient(to bottom left, #3eb049, #173f1e, #3eb049) !important;
+  color: #ffffff;
+}
+
+.btn.btn-goatApp {
+  background: #282c29;
+  background-image: linear-gradient(to bottom left, #6b706d, #101011, #252b26);
+  background-size: 210% 210%;
+  background-position: top right;
+  color: #ffffff;
+  background-size: 210% 210%;
+  background-position: top right;
+  background-repeat: space;
+}
+
+.btn.btn-goatApp:focus,
+.btn.btn-goatApp:active,
+.btn.btn-goatApp:hover {
+  background-color: #344e86;
+  background-image: linear-gradient(to bottom left, #aaaaaa, #424943, #ffffff) !important;
+  background-image: -moz-linear-gradient(to bottom left, #aaaaaa, #424943, #ffffff) !important;
+  color: #ffffff;
+}
+
+
 .btn.btn-twitter {
   background: #55acee;
   background-image: linear-gradient(to bottom left, #55acee, #147bc9, #55acee);
