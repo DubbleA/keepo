@@ -1,0 +1,237 @@
+<?xml version='1.0'?>
+<ArrayOfBilling>
+    <Billing>
+        <Enabled>true</Enabled>
+        <billingType>CC</billingType>
+        <billingDetails>
+            <friendlyName>Profile1</friendlyName>
+            <email>john@gmail.com</email>
+            <fNameBilling>John</fNameBilling>
+            <lNameBilling>Doe</lNameBilling>
+            <addressOneBilling>123 E Main St.</addressOneBilling>
+            <addressTwoBilling></addressTwoBilling>
+            <cityBilling>San Fransisco</cityBilling>
+            <stateBilling>CA</stateBilling>
+            <zipcodeBilling>94016</zipcodeBilling>
+            <phoneBilling>6890920912</phoneBilling>
+            <countryBilling>US</countryBilling>
+            <houseNumBilling></houseNumBilling>
+            <shippingAsBilling>true</shippingAsBilling>
+            <fNameShipping>John</fNameShipping>
+            <lNameShipping>Doe</lNameShipping>
+            <addressOneShipping>123 E Main St.</addressOneShipping>
+            <addressTwoShipping></addressTwoShipping>
+            <cityShipping>San Fransisco</cityShipping>
+            <stateShipping>CA</stateShipping>
+            <zipcodeShipping>94016</zipcodeShipping>
+            <phoneShipping>6890920912</phoneShipping>
+            <countryShipping>US</countryShipping>
+            <houseNumShipping></houseNumShipping>
+            <cardType>VISA</cardType>
+            <nameOnCard>John Doe</nameOnCard>
+            <cardNumber>4242424242424242</cardNumber>
+            <expiryMonth>2</expiryMonth>
+            <expiryYear>2022</expiryYear>
+            <securityCode>143</securityCode>
+            <dobDD>20</dobDD>
+            <dobYYYY>1978</dobYYYY>
+            <delaySeconds>0</delaySeconds>
+        </billingDetails>
+        <usedOnce>true</usedOnce>
+    </Billing>
+    <Billing>
+        <Enabled>true</Enabled>
+        <billingType>CC</billingType>
+        <billingDetails>
+            <friendlyName>Profile2</friendlyName>
+            <email>jane@gmail.com</email>
+            <fNameBilling></fNameBilling>
+            <lNameBilling></lNameBilling>
+            <addressOneBilling></addressOneBilling>
+            <addressTwoBilling></addressTwoBilling>
+            <cityBilling></cityBilling>
+            <stateBilling></stateBilling>
+            <zipcodeBilling></zipcodeBilling>
+            <phoneBilling>4590789877</phoneBilling>
+            <countryBilling>US</countryBilling>
+            <houseNumBilling></houseNumBilling>
+            <shippingAsBilling>false</shippingAsBilling>
+            <fNameShipping>Jane</fNameShipping>
+            <lNameShipping>Doe</lNameShipping>
+            <addressOneShipping>124 E Main St.</addressOneShipping>
+            <addressTwoShipping>Apt 2</addressTwoShipping>
+            <cityShipping>Los Angelos</cityShipping>
+            <stateShipping>CA</stateShipping>
+            <zipcodeShipping>90001</zipcodeShipping>
+            <phoneShipping>4590789877</phoneShipping>
+            <countryShipping>US</countryShipping>
+            <houseNumShipping></houseNumShipping>
+            <cardType>VISA</cardType>
+            <nameOnCard>Jane Doe</nameOnCard>
+            <cardNumber>4242424242424243</cardNumber>
+            <expiryMonth>3</expiryMonth>
+            <expiryYear>2021</expiryYear>
+            <securityCode>478</securityCode>
+            <dobDD>20</dobDD>
+            <dobYYYY>1978</dobYYYY>
+            <delaySeconds>0</delaySeconds>
+        </billingDetails>
+        <usedOnce>false</usedOnce>
+    </Billing>
+    <Billing>
+        <Enabled>true</Enabled>
+        <billingType>CC</billingType>
+        <billingDetails>
+            <friendlyName>Profle3</friendlyName>
+            <email>bobby@catchall.com</email>
+            <fNameBilling>bob</fNameBilling>
+            <lNameBilling>smur</lNameBilling>
+            <addressOneBilling>123 A Copalot St.</addressOneBilling>
+            <addressTwoBilling></addressTwoBilling>
+            <cityBilling>Toronto</cityBilling>
+            <stateBilling>ON</stateBilling>
+            <zipcodeBilling>K1B9L2</zipcodeBilling>
+            <phoneBilling>4834883483</phoneBilling>
+            <countryBilling>CA</countryBilling>
+            <houseNumBilling></houseNumBilling>
+            <shippingAsBilling>true</shippingAsBilling>
+            <fNameShipping>bob</fNameShipping>
+            <lNameShipping>smur</lNameShipping>
+            <addressOneShipping>123 A Copalot St.</addressOneShipping>
+            <addressTwoShipping></addressTwoShipping>
+            <cityShipping>Toronto</cityShipping>
+            <stateShipping>ON</stateShipping>
+            <zipcodeShipping>K1B9L2</zipcodeShipping>
+            <phoneShipping>4834883483</phoneShipping>
+            <countryShipping>CA</countryShipping>
+            <houseNumShipping></houseNumShipping>
+            <cardType>MASTERCARD</cardType>
+            <nameOnCard>Bob Ray</nameOnCard>
+            <cardNumber>5324234509871234</cardNumber>
+            <expiryMonth>8</expiryMonth>
+            <expiryYear>2023</expiryYear>
+            <securityCode>032</securityCode>
+            <dobDD>20</dobDD>
+            <dobYYYY>1978</dobYYYY>
+            <delaySeconds>0</delaySeconds>
+        </billingDetails>
+        <usedOnce>true</usedOnce>
+    </Billing>
+    <Billing>
+        <Enabled>true</Enabled>
+        <billingType>CC</billingType>
+        <billingDetails>
+            <friendlyName>1</friendlyName>
+            <email>adhd@catchall.com</email>
+            <fNameBilling>Bob</fNameBilling>
+            <lNameBilling>Marley</lNameBilling>
+            <addressOneBilling>123 Street Road</addressOneBilling>
+            <addressTwoBilling>Apt 1</addressTwoBilling>
+            <cityBilling>Highland</cityBilling>
+            <stateBilling>CA</stateBilling>
+            <zipcodeBilling>95121</zipcodeBilling>
+            <phoneBilling>1245357657</phoneBilling>
+            <countryBilling>US</countryBilling>
+            <houseNumBilling></houseNumBilling>
+            <shippingAsBilling>true</shippingAsBilling>
+            <fNameShipping>Bob</fNameShipping>
+            <lNameShipping>Marley</lNameShipping>
+            <addressOneShipping>123 Street Road</addressOneShipping>
+            <addressTwoShipping>Apt 1</addressTwoShipping>
+            <cityShipping>Highland</cityShipping>
+            <stateShipping>CA</stateShipping>
+            <zipcodeShipping>95121</zipcodeShipping>
+            <phoneShipping>1245357657</phoneShipping>
+            <countryShipping>US</countryShipping>
+            <houseNumShipping></houseNumShipping>
+            <cardType>VISA</cardType>
+            <nameOnCard>Bob Marley</nameOnCard>
+            <cardNumber>4824511832727475</cardNumber>
+            <expiryMonth>2</expiryMonth>
+            <expiryYear>2023</expiryYear>
+            <securityCode>412</securityCode>
+            <dobDD>20</dobDD>
+            <dobYYYY>1978</dobYYYY>
+            <delaySeconds>0</delaySeconds>
+        </billingDetails>
+        <usedOnce>false</usedOnce>
+    </Billing>
+    <Billing>
+        <Enabled>true</Enabled>
+        <billingType>CC</billingType>
+        <billingDetails>
+            <friendlyName>AMEX</friendlyName>
+            <email>ewuyfweu@yewfuy.com</email>
+            <fNameBilling>Keke</fNameBilling>
+            <lNameBilling>Cringe</lNameBilling>
+            <addressOneBilling>218 Cop Alot</addressOneBilling>
+            <addressTwoBilling>Cringe</addressTwoBilling>
+            <cityBilling>Yeeztopia</cityBilling>
+            <stateBilling>PA</stateBilling>
+            <zipcodeBilling>32914</zipcodeBilling>
+            <phoneBilling>1425684465</phoneBilling>
+            <countryBilling>US</countryBilling>
+            <houseNumBilling></houseNumBilling>
+            <shippingAsBilling>false</shippingAsBilling>
+            <fNameShipping>Keke</fNameShipping>
+            <lNameShipping>Cringe</lNameShipping>
+            <addressOneShipping>218 Cop Alot</addressOneShipping>
+            <addressTwoShipping></addressTwoShipping>
+            <cityShipping>Yeeztopia</cityShipping>
+            <stateShipping>PA</stateShipping>
+            <zipcodeShipping>32914</zipcodeShipping>
+            <phoneShipping>1425684465</phoneShipping>
+            <countryShipping>US</countryShipping>
+            <houseNumShipping></houseNumShipping>
+            <cardType>AMEX</cardType>
+            <nameOnCard>Keke Cringe</nameOnCard>
+            <cardNumber>379231848659177</cardNumber>
+            <expiryMonth>6</expiryMonth>
+            <expiryYear>2022</expiryYear>
+            <securityCode>5344</securityCode>
+            <dobDD>20</dobDD>
+            <dobYYYY>1978</dobYYYY>
+            <delaySeconds>0</delaySeconds>
+        </billingDetails>
+        <usedOnce>false</usedOnce>
+    </Billing>
+    <Billing>
+        <Enabled>true</Enabled>
+        <billingType>CC</billingType>
+        <billingDetails>
+            <friendlyName>Test 3</friendlyName>
+            <email>fwef@vkyfwe.com</email>
+            <fNameBilling>Fake</fNameBilling>
+            <lNameBilling>Profile</lNameBilling>
+            <addressOneBilling>Aven Grove 395</addressOneBilling>
+            <addressTwoBilling></addressTwoBilling>
+            <cityBilling>Citi</cityBilling>
+            <stateBilling>TX</stateBilling>
+            <zipcodeBilling>78732</zipcodeBilling>
+            <phoneBilling>6546452357</phoneBilling>
+            <countryBilling>US</countryBilling>
+            <houseNumBilling></houseNumBilling>
+            <shippingAsBilling>true</shippingAsBilling>
+            <fNameShipping>Fake</fNameShipping>
+            <lNameShipping>Profile</lNameShipping>
+            <addressOneShipping>Aven Grove 395</addressOneShipping>
+            <addressTwoShipping></addressTwoShipping>
+            <cityShipping>Citi</cityShipping>
+            <stateShipping>TX</stateShipping>
+            <zipcodeShipping>78732</zipcodeShipping>
+            <phoneShipping>6546452357</phoneShipping>
+            <countryShipping>US</countryShipping>
+            <houseNumShipping></houseNumShipping>
+            <cardType>DISCOVER</cardType>
+            <nameOnCard>Profile Fake</nameOnCard>
+            <cardNumber>6011842957971616</cardNumber>
+            <expiryMonth>9</expiryMonth>
+            <expiryYear>2025</expiryYear>
+            <securityCode>582</securityCode>
+            <dobDD>20</dobDD>
+            <dobYYYY>1978</dobYYYY>
+            <delaySeconds>0</delaySeconds>
+        </billingDetails>
+        <usedOnce>true</usedOnce>
+    </Billing>
+</ArrayOfBilling>

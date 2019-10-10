@@ -1,0 +1,7 @@
+id,nickName,firstName,lastName,phoneticName,phoneticSurname,phoneNumber,cardType,cardNumber,cardCVV,expireMonth,expireYear,address1,address2,address3,city,state,country,postal
+0,Profile1,John,Doe,,,6890920912,VISA,4242424242424242,143,02,2022,123 E Main St.,,,San Fransisco,CA,US,94016
+1,Profile2,Jane,Doe,,,4590789877,VISA,4242424242424243,478,03,2021,124 E Main St.,Apt 2,,Los Angelos,CA,US,90001
+2,Profle3,bob,smur,,,4834883483,MASTERCARD,5324234509871234,32,08,2023,123 A Copalot St.,,,Toronto,ON,CA,K1B9L2
+3,1,Bob,Marley,,,1245357657,VISA,4824511832727475,412,02,2023,123 Street Road,Apt 1,,Highland,CA,US,95121
+4,AMEX,Keke,Cringe,,,1425684465,AMEX,379231848659177,5344,06,2022,218 Cop Alot,,,Yeeztopia,PA,US,32914
+5,Test 3,Fake,Profile,,,6546452357,DISCOVER,6011842957971616,582,09,2025,Aven Grove 395,,,Citi,TX,US,78732

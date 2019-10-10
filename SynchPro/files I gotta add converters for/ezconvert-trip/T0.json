@@ -1,0 +1,17 @@
+{
+    "profile": "Profile1",
+    "name": "John Doe",
+    "address": "123 E Main St.",
+    "apt": "",
+    "email": "john@gmail.com",
+    "city": "San Fransisco",
+    "zip": "94016",
+    "phone": "689 092 0912",
+    "country": "USA",
+    "state": "CA",
+    "creditcardnumber": "4242 4242 4242 4242",
+    "cardtype": "Visa",
+    "expirymonth": "02",
+    "expiryyear": "2022",
+    "cvv": "143"
+}

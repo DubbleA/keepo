@@ -1,0 +1,207 @@
+<?xml version='1.0'?>
+<ArrayOfProfile>
+    <Profile>
+        <ProfileName>Profile1</ProfileName>
+        <BillingFirstName>John</BillingFirstName>
+        <BillingLastName>Doe</BillingLastName>
+        <BillingAddressLine1>123 E Main St.</BillingAddressLine1>
+        <BillingAddressLine2></BillingAddressLine2>
+        <BillingCity>San Fransisco</BillingCity>
+        <BillingState>CA</BillingState>
+        <BillingCountryCode>US</BillingCountryCode>
+        <BillingZip>94016</BillingZip>
+        <BillingPhone>6890920912</BillingPhone>
+        <BillingEmail>john@gmail.com</BillingEmail>
+        <ShippingFirstName>John</ShippingFirstName>
+        <ShippingLastName>Doe</ShippingLastName>
+        <ShippingAddressLine1>123 E Main St.</ShippingAddressLine1>
+        <ShippingAddressLine2></ShippingAddressLine2>
+        <ShippingCity>San Fransisco</ShippingCity>
+        <ShippingState>CA</ShippingState>
+        <ShippingCountryCode>US</ShippingCountryCode>
+        <ShippingZip>94016</ShippingZip>
+        <ShippingPhone>6890920912</ShippingPhone>
+        <ShippingEmail>john@gmail.com</ShippingEmail>
+        <NameOnCard>John Doe</NameOnCard>
+        <CreditCardNumber>4242424242424242</CreditCardNumber>
+        <ExpirationMonth>02</ExpirationMonth>
+        <ExpirationYear>2022</ExpirationYear>
+        <Cvv>143</Cvv>
+        <CardType>Visa</CardType>
+        <OneCheckoutPerWebsite>true</OneCheckoutPerWebsite>
+        <SameBillingShipping>true</SameBillingShipping>
+        <BirthDay>12</BirthDay>
+        <BirthMonth>25</BirthMonth>
+        <BirthYear>1975</BirthYear>
+    </Profile>
+    <Profile>
+        <ProfileName>Profile2</ProfileName>
+        <BillingFirstName></BillingFirstName>
+        <BillingLastName></BillingLastName>
+        <BillingAddressLine1></BillingAddressLine1>
+        <BillingAddressLine2></BillingAddressLine2>
+        <BillingCity></BillingCity>
+        <BillingState></BillingState>
+        <BillingCountryCode>US</BillingCountryCode>
+        <BillingZip></BillingZip>
+        <BillingPhone>4590789877</BillingPhone>
+        <BillingEmail>jane@gmail.com</BillingEmail>
+        <ShippingFirstName>Jane</ShippingFirstName>
+        <ShippingLastName>Doe</ShippingLastName>
+        <ShippingAddressLine1>124 E Main St.</ShippingAddressLine1>
+        <ShippingAddressLine2>Apt 2</ShippingAddressLine2>
+        <ShippingCity>Los Angelos</ShippingCity>
+        <ShippingState>CA</ShippingState>
+        <ShippingCountryCode>US</ShippingCountryCode>
+        <ShippingZip>90001</ShippingZip>
+        <ShippingPhone>4590789877</ShippingPhone>
+        <ShippingEmail>jane@gmail.com</ShippingEmail>
+        <NameOnCard>Jane Doe</NameOnCard>
+        <CreditCardNumber>4242424242424243</CreditCardNumber>
+        <ExpirationMonth>03</ExpirationMonth>
+        <ExpirationYear>2021</ExpirationYear>
+        <Cvv>478</Cvv>
+        <CardType>Visa</CardType>
+        <OneCheckoutPerWebsite>false</OneCheckoutPerWebsite>
+        <SameBillingShipping>false</SameBillingShipping>
+        <BirthDay>12</BirthDay>
+        <BirthMonth>25</BirthMonth>
+        <BirthYear>1975</BirthYear>
+    </Profile>
+    <Profile>
+        <ProfileName>Profle3</ProfileName>
+        <BillingFirstName>bob</BillingFirstName>
+        <BillingLastName>smur</BillingLastName>
+        <BillingAddressLine1>123 A Copalot St.</BillingAddressLine1>
+        <BillingAddressLine2></BillingAddressLine2>
+        <BillingCity>Toronto</BillingCity>
+        <BillingState>ON</BillingState>
+        <BillingCountryCode>CA</BillingCountryCode>
+        <BillingZip>K1B9L2</BillingZip>
+        <BillingPhone>4834883483</BillingPhone>
+        <BillingEmail>bobby@catchall.com</BillingEmail>
+        <ShippingFirstName>bob</ShippingFirstName>
+        <ShippingLastName>smur</ShippingLastName>
+        <ShippingAddressLine1>123 A Copalot St.</ShippingAddressLine1>
+        <ShippingAddressLine2></ShippingAddressLine2>
+        <ShippingCity>Toronto</ShippingCity>
+        <ShippingState>ON</ShippingState>
+        <ShippingCountryCode>CA</ShippingCountryCode>
+        <ShippingZip>K1B9L2</ShippingZip>
+        <ShippingPhone>4834883483</ShippingPhone>
+        <ShippingEmail>bobby@catchall.com</ShippingEmail>
+        <NameOnCard>Bob Ray</NameOnCard>
+        <CreditCardNumber>5324234509871234</CreditCardNumber>
+        <ExpirationMonth>08</ExpirationMonth>
+        <ExpirationYear>2023</ExpirationYear>
+        <Cvv>032</Cvv>
+        <CardType>MasterCard</CardType>
+        <OneCheckoutPerWebsite>true</OneCheckoutPerWebsite>
+        <SameBillingShipping>true</SameBillingShipping>
+        <BirthDay>12</BirthDay>
+        <BirthMonth>25</BirthMonth>
+        <BirthYear>1975</BirthYear>
+    </Profile>
+    <Profile>
+        <ProfileName>1</ProfileName>
+        <BillingFirstName>Bob</BillingFirstName>
+        <BillingLastName>Marley</BillingLastName>
+        <BillingAddressLine1>123 Street Road</BillingAddressLine1>
+        <BillingAddressLine2>Apt 1</BillingAddressLine2>
+        <BillingCity>Highland</BillingCity>
+        <BillingState>CA</BillingState>
+        <BillingCountryCode>US</BillingCountryCode>
+        <BillingZip>95121</BillingZip>
+        <BillingPhone>1245357657</BillingPhone>
+        <BillingEmail>adhd@catchall.com</BillingEmail>
+        <ShippingFirstName>Bob</ShippingFirstName>
+        <ShippingLastName>Marley</ShippingLastName>
+        <ShippingAddressLine1>123 Street Road</ShippingAddressLine1>
+        <ShippingAddressLine2>Apt 1</ShippingAddressLine2>
+        <ShippingCity>Highland</ShippingCity>
+        <ShippingState>CA</ShippingState>
+        <ShippingCountryCode>US</ShippingCountryCode>
+        <ShippingZip>95121</ShippingZip>
+        <ShippingPhone>1245357657</ShippingPhone>
+        <ShippingEmail>adhd@catchall.com</ShippingEmail>
+        <NameOnCard>Bob Marley</NameOnCard>
+        <CreditCardNumber>4824511832727475</CreditCardNumber>
+        <ExpirationMonth>02</ExpirationMonth>
+        <ExpirationYear>2023</ExpirationYear>
+        <Cvv>412</Cvv>
+        <CardType>Visa</CardType>
+        <OneCheckoutPerWebsite>false</OneCheckoutPerWebsite>
+        <SameBillingShipping>true</SameBillingShipping>
+        <BirthDay>12</BirthDay>
+        <BirthMonth>25</BirthMonth>
+        <BirthYear>1975</BirthYear>
+    </Profile>
+    <Profile>
+        <ProfileName>AMEX</ProfileName>
+        <BillingFirstName>Keke</BillingFirstName>
+        <BillingLastName>Cringe</BillingLastName>
+        <BillingAddressLine1>218 Cop Alot</BillingAddressLine1>
+        <BillingAddressLine2>ap 2</BillingAddressLine2>
+        <BillingCity>Yeeztopia</BillingCity>
+        <BillingState>PA</BillingState>
+        <BillingCountryCode>US</BillingCountryCode>
+        <BillingZip>32914</BillingZip>
+        <BillingPhone>1425684465</BillingPhone>
+        <BillingEmail>ewuyfweu@yewfuy.com</BillingEmail>
+        <ShippingFirstName>Keke</ShippingFirstName>
+        <ShippingLastName>Cringe</ShippingLastName>
+        <ShippingAddressLine1>218 Cop Alot</ShippingAddressLine1>
+        <ShippingAddressLine2></ShippingAddressLine2>
+        <ShippingCity>Yeeztopia</ShippingCity>
+        <ShippingState>PA</ShippingState>
+        <ShippingCountryCode>US</ShippingCountryCode>
+        <ShippingZip>32914</ShippingZip>
+        <ShippingPhone>1425684465</ShippingPhone>
+        <ShippingEmail>ewuyfweu@yewfuy.com</ShippingEmail>
+        <NameOnCard>Keke Cringe</NameOnCard>
+        <CreditCardNumber>379231848659177</CreditCardNumber>
+        <ExpirationMonth>06</ExpirationMonth>
+        <ExpirationYear>2022</ExpirationYear>
+        <Cvv>5344</Cvv>
+        <CardType>American Express</CardType>
+        <OneCheckoutPerWebsite>false</OneCheckoutPerWebsite>
+        <SameBillingShipping>false</SameBillingShipping>
+        <BirthDay>12</BirthDay>
+        <BirthMonth>25</BirthMonth>
+        <BirthYear>1975</BirthYear>
+    </Profile>
+    <Profile>
+        <ProfileName>Test 3</ProfileName>
+        <BillingFirstName>Fake</BillingFirstName>
+        <BillingLastName>Profile</BillingLastName>
+        <BillingAddressLine1>Aven Grove 395</BillingAddressLine1>
+        <BillingAddressLine2></BillingAddressLine2>
+        <BillingCity>Citi</BillingCity>
+        <BillingState>TX</BillingState>
+        <BillingCountryCode>US</BillingCountryCode>
+        <BillingZip>78732</BillingZip>
+        <BillingPhone>6546452357</BillingPhone>
+        <BillingEmail>fwef@vkyfwe.com</BillingEmail>
+        <ShippingFirstName>Fake</ShippingFirstName>
+        <ShippingLastName>Profile</ShippingLastName>
+        <ShippingAddressLine1>Aven Grove 395</ShippingAddressLine1>
+        <ShippingAddressLine2></ShippingAddressLine2>
+        <ShippingCity>Citi</ShippingCity>
+        <ShippingState>TX</ShippingState>
+        <ShippingCountryCode>US</ShippingCountryCode>
+        <ShippingZip>78732</ShippingZip>
+        <ShippingPhone>6546452357</ShippingPhone>
+        <ShippingEmail>fwef@vkyfwe.com</ShippingEmail>
+        <NameOnCard>Profile Fake</NameOnCard>
+        <CreditCardNumber>6011842957971616</CreditCardNumber>
+        <ExpirationMonth>09</ExpirationMonth>
+        <ExpirationYear>2025</ExpirationYear>
+        <Cvv>582</Cvv>
+        <CardType>Discover</CardType>
+        <OneCheckoutPerWebsite>true</OneCheckoutPerWebsite>
+        <SameBillingShipping>true</SameBillingShipping>
+        <BirthDay>12</BirthDay>
+        <BirthMonth>25</BirthMonth>
+        <BirthYear>1975</BirthYear>
+    </Profile>
+</ArrayOfProfile>
