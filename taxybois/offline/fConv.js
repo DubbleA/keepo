@@ -8,7 +8,7 @@ csvConv(csvFilePath) {
     var jsonObj = csvToJson.fieldDelimiter(',').getJsonFromCsv(csvFilePath);
     var finaljson = [];
 
-    for (let i = 0; i < jsonObj.length; i++) {
+    for (var i = 0; i < jsonObj.length; i++) {
 
         if (!(jsonObj[i] == undefined) && !(jsonObj[i].hasOwnProperty('Date')) && !(jsonObj[i].hasOwnProperty('Item'))) {
             
@@ -63,7 +63,7 @@ storeStringSwift(parsed) {
     //console.log(parsed[0].brand);
     var final = [];
 
-    for (let i = 0; i < parsed.length; i++) {
+    for (var i = 0; i < parsed.length; i++) {
 
         category = this.ifCity(parsed[i].category);
         date = this.ifCity(parsed[i].Date);
