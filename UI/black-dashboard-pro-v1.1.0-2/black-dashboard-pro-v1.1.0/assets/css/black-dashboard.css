@@ -10242,6 +10242,25 @@ fieldset[disabled]
   color: #ffffff;
 }
 
+.btn.btn-aqua {
+  background: #3e8cb0;
+  background-image: linear-gradient(to bottom left, #3b8298, #1e3d4f, #3e8cb0);
+  background-size: 180% 210%;
+  background-position: top right;
+  color: #ffffff;
+  background-size: 180% 210%;
+  background-position: top right;
+  background-repeat: space;
+}
+
+.btn.btn-aqua:focus,
+.btn.btn-aqua:active,
+.btn.btn-aqua:hover {
+  background-color: #344e86;
+  background-image: linear-gradient(to bottom left, #3e86b0, #173c3f, #3e86b0) !important;
+  background-image: -moz-linear-gradient(to bottom left, #3e90b0, #17393f, #3e90b0) !important;
+  color: #ffffff;
+}
 
 .btn.btn-twitter {
   background: #55acee;
