@@ -24,21 +24,21 @@ const stats = require('./stats.js');
 var stat = new stats();
 var rawdata = fs.readFileSync('./bigbasicNEW.json');
 var parsed = JSON.parse(rawdata);
-//console.log(total(parsed));
+console.log(stat.total(parsed));
 var taf = stat.total(parsed);
-//console.log(taf);
+console.log(taf);
 
-const fConv = require("./fConv.js");
-var finConv = new fConv();
-//var finConv = new finConv();
-
-
-//var fpath = './FCinv.csv';
-var fpath = './brendan.csv';
+// const fConv = require("./fConv.js");
+// var finConv = new fConv();
+// //var finConv = new finConv();
 
 
-var news = finConv.csvConv(fpath);
-console.log(news);
+// //var fpath = './FCinv.csv';
+// var fpath = './brendan.csv';
+
+
+// var news = finConv.csvConv(fpath);
+// console.log(news);
 
 
 //var jeff = JSON.parse(finConv.writeNewFile(finConv.storeStringSwift(finConv.csvConv(fpath))));
