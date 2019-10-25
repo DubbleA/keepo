@@ -324,19 +324,21 @@
     let options = Array.from(document.getElementsByClassName('sectionOption'));
     options.forEach(option => {
       option.addEventListener('click', () => {
-        options.forEach(opt => opt.parentNode.className = '');
-        option.parentNode.className = 'active';
-        try {
-          if (option.parentNode.parentNode.parentNode.previousElementSibling.className == 'sectionOption')
-            option.parentNode.parentNode.parentNode.parentNode.className = 'active';
-        } catch (e) {
-          //Haha stinky, haha respected error
+        if (!option.getAttribute('data-toggle')) {
+          options.forEach(opt => opt.parentNode.className = '');
+          option.parentNode.className = 'active';
+          try {
+            if (option.parentNode.parentNode.parentNode.previousElementSibling.className == 'sectionOption')
+              option.parentNode.parentNode.parentNode.parentNode.className = 'active';
+          } catch (e) {
+            //Haha stinky, haha respected error
+          }
+          let showSection = document.getElementById(option.getAttribute('section'));
+          Array.from(document.getElementsByClassName('section')).forEach(section => section != showSection ?
+            section.style
+            .display = 'none' : true);
+          showSection.style.display = '';
         }
-        let showSection = document.getElementById(option.getAttribute('section'));
-        Array.from(document.getElementsByClassName('section')).forEach(section => section != showSection ?
-          section.style
-          .display = 'none' : true);
-        showSection.style.display = '';
       });
     });
 
