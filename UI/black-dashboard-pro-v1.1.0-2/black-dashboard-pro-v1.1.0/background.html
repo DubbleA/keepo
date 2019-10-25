@@ -27,15 +27,20 @@
   <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
   <link href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" rel="stylesheet">
   <!-- Nucleo Icons -->
-  <link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
   <!-- CSS Files -->
-  <link href="./assets/css/black-dashboard.css?v=1.1.0" rel="stylesheet" />
+  <link href="../assets/css/black-dashboard.css?v=1.1.0" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
-  <link href="./assets/demo/demo.css" rel="stylesheet" />
+  <link href="../assets/demo/demo.css" rel="stylesheet" />
 
   <!-- HTML FILES -->
   <link import="" href="./sections/dashboard.html">
+  <link import="" href="./sections/manager.html">
+  <link import="" href="./sections/charts.html">
   <link import="" href="./sections/settings.html">
+  <link import="" href="./sections/tracking.html">
+  <link import="" href="./sections/export.html">
+  <link import="" href="./sections/calender.html">
 </head>
 
 <body class="sidebar-mini ">
@@ -68,7 +73,7 @@
           </li>
           
           <li>
-            <a href="../examples/manager.html">
+            <a onclick="loadContent('manager')">
               <i class="tim-icons icon-molecule-40"></i>
               <p>Manager</p>
             </a>
@@ -76,7 +81,7 @@
 
           
           <li>
-            <a href="../examples/charts.html">
+            <a onclick="loadContent('charts')">
               <i class="tim-icons icon-chart-bar-32"></i>
               <p>Charts</p>
             </a>
@@ -102,7 +107,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="../examples/widgets/tracking.html">
+                  <a onclick="loadContent('tracking')">
                     <span class="sidebar-mini-icon">Tr</span>
                     <span class="sidebar-normal"> Tracking </span>
 
@@ -110,7 +115,7 @@
                 </li>
 
                 <li>
-                  <a href="../examples/widgets/export.html">
+                  <a onclick="loadContent('export')">
                     <span class="sidebar-mini-icon">Exp</span>
                     <span class="sidebar-normal"> Export </span>
 
@@ -122,7 +127,7 @@
           </li>
           
           <li>
-            <a href="../examples/calendar.html">
+            <a onclick="loadContent('calender')">
               <i class="tim-icons icon-time-alarm"></i>
               <p>Calendar</p>
             </a>
