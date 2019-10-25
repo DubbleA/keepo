@@ -35,7 +35,12 @@
 
   <!-- HTML FILES -->
   <link import="" href="./sections/dashboard.html">
+  <link import="" href="./sections/manager.html">
+  <link import="" href="./sections/charts.html">
   <link import="" href="./sections/settings.html">
+  <link import="" href="./sections/tracking.html">
+  <link import="" href="./sections/export.html">
+  <link import="" href="./sections/calender.html">
 </head>
 
 <body class="sidebar-mini ">
@@ -61,28 +66,28 @@
         </div>
         <ul class="nav">
           <li class="active">
-            <a onclick="loadContent('dashboard')">
+            <a class="sectionOption" section="dashboard">
               <i class="tim-icons icon-chart-pie-36"></i>
               <p>Dashboard</p>
             </a>
           </li>
-          
+
           <li>
-            <a href="../examples/manager.html">
+            <a class="sectionOption" section="manager">
               <i class="tim-icons icon-molecule-40"></i>
               <p>Manager</p>
             </a>
           </li>
 
-          
+
           <li>
-            <a href="../examples/charts.html">
+            <a class="sectionOption" section="charts">
               <i class="tim-icons icon-chart-bar-32"></i>
               <p>Charts</p>
             </a>
           </li>
 
-  
+
           <li>
             <a data-toggle="collapse" href="#widgets">
               <i class="tim-icons icon-settings"></i>
@@ -95,14 +100,14 @@
               <ul class="nav">
 
                 <li>
-                  <a onclick="loadContent('settings')">
+                  <a class="sectionOption" section="settings">
                     <span class="sidebar-mini-icon">Set</span>
                     <span class="sidebar-normal"> Settings </span>
 
                   </a>
                 </li>
                 <li>
-                  <a href="../examples/widgets/tracking.html">
+                  <a class="sectionOption" section="tracking">
                     <span class="sidebar-mini-icon">Tr</span>
                     <span class="sidebar-normal"> Tracking </span>
 
@@ -110,7 +115,7 @@
                 </li>
 
                 <li>
-                  <a href="../examples/widgets/export.html">
+                  <a class="sectionOption" section="export">
                     <span class="sidebar-mini-icon">Exp</span>
                     <span class="sidebar-normal"> Export </span>
 
@@ -120,9 +125,9 @@
               </ul>
             </div>
           </li>
-          
+
           <li>
-            <a href="../examples/calendar.html">
+            <a class="sectionOption" section="calender">
               <i class="tim-icons icon-time-alarm"></i>
               <p>Calendar</p>
             </a>
@@ -138,7 +143,8 @@
         <div class="container-fluid">
           <div class="navbar-wrapper">
             <div class="navbar-minimize d-inline">
-              <button class="minimize-sidebar btn btn-link btn-just-icon" rel="tooltip" data-original-title="Sidebar toggle" data-placement="right">
+              <button class="minimize-sidebar btn btn-link btn-just-icon" rel="tooltip"
+                data-original-title="Sidebar toggle" data-placement="right">
                 <i class="tim-icons icon-align-center visible-on-sidebar-regular"></i>
                 <i class="tim-icons icon-bullet-list-67 visible-on-sidebar-mini"></i>
               </button>
@@ -152,7 +158,8 @@
             </div>
             <a class="navbar-brand" href="javascript:void(0)">Dashboard</a>
           </div>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+            aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar navbar-kebab"></span>
             <span class="navbar-toggler-bar navbar-kebab"></span>
             <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -160,7 +167,8 @@
           <div class="collapse navbar-collapse" id="navigation">
             <ul class="navbar-nav ml-auto">
               <li class="search-bar input-group">
-                <button class="btn btn-link" id="search-button" data-toggle="modal" data-target="#searchModal"><i class="tim-icons icon-zoom-split"></i>
+                <button class="btn btn-link" id="search-button" data-toggle="modal" data-target="#searchModal"><i
+                    class="tim-icons icon-zoom-split"></i>
                   <span class="d-lg-none d-md-block">Search</span>
                 </button>
               </li>
@@ -218,7 +226,8 @@
           </div>
         </div>
       </nav>
-      <div class="modal modal-search fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModal" aria-hidden="true">
+      <div class="modal modal-search fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModal"
+        aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
@@ -312,15 +321,24 @@
   <script src="./assets/demo/demo.js"></script>
 
   <script>
-  function loadContent(sectionId) {
-      let showSection = document.getElementById(sectionId);
-      Array.from(document.getElementsByClassName('section')).forEach(section => section != showSection ? section.style.display = 'none' : true);
-      showSection.style.display = '';
-    }
-    
+    let options = Array.from(document.getElementsByClassName('sectionOption'));
+    options.forEach(option => {
+      option.addEventListener('click', () => {
+        options.forEach(opt => opt.parentNode.className = '');
+        option.parentNode.className = 'active';
+        let showSection = document.getElementById(option.getAttribute('section'));
+        Array.from(document.getElementsByClassName('section')).forEach(section => section != showSection ?
+          section.style
+          .display = 'none' : true);
+        showSection.style.display = '';
+      });
+      window.scrollTo(0, 0);
+    });
+
     let links = Array.from(document.querySelectorAll('link[import=""]'));
     links.forEach(async link => {
-      document.getElementById('content-wrapper').insertAdjacentHTML('beforeend', (await (await fetch(link.href)).text()));
+      document.getElementById('content-wrapper').insertAdjacentHTML('beforeend', (await (await fetch(link.href))
+        .text()));
     });
   </script>
 </body>
