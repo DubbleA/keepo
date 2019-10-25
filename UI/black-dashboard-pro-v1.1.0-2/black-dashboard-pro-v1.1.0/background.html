@@ -88,8 +88,8 @@
           </li>
 
 
-          <li onload="gayShit(this)">
-            <a data-toggle="collapse" href="#widgets">
+          <li>
+            <a class="sectionOption" data-toggle="collapse" href="#widgets">
               <i class="tim-icons icon-settings"></i>
               <p>
                 Widgets
@@ -326,6 +326,8 @@
       option.addEventListener('click', () => {
         options.forEach(opt => opt.parentNode.className = '');
         option.parentNode.className = 'active';
+        if (option.parentNode.parentNode.parentNode.previousElementSibling.className == 'sectionOption')
+          option.parentNode.parentNode.parentNode.parentNode.className = 'active';
         let showSection = document.getElementById(option.getAttribute('section'));
         Array.from(document.getElementsByClassName('section')).forEach(section => section != showSection ?
           section.style
@@ -339,10 +341,6 @@
       document.getElementById('content-wrapper').insertAdjacentHTML('beforeend', (await (await fetch(link.href))
         .text()));
     });
-
-    function gayShit(element) {
-      new MutationObserver((mutation) => {console.log(mutation)}).observe(element, {childList:true,subtree:true});
-    }
   </script>
 </body>
 
