@@ -19,7 +19,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
-  <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+  <link rel="icon" type="image/png" href="./assets/img/slogo.png">
   <title>
     Synchronous
   </title>
@@ -88,7 +88,7 @@
           </li>
 
 
-          <li>
+          <li onload="gayShit(this)">
             <a data-toggle="collapse" href="#widgets">
               <i class="tim-icons icon-settings"></i>
               <p>
@@ -332,7 +332,6 @@
           .display = 'none' : true);
         showSection.style.display = '';
       });
-      window.scrollTo(0, 0);
     });
 
     let links = Array.from(document.querySelectorAll('link[import=""]'));
@@ -340,6 +339,10 @@
       document.getElementById('content-wrapper').insertAdjacentHTML('beforeend', (await (await fetch(link.href))
         .text()));
     });
+
+    function gayShit(element) {
+      new MutationObserver((mutation) => {console.log(mutation)}).observe(element, {childList:true,subtree:true});
+    }
   </script>
 </body>
 
