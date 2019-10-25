@@ -40,7 +40,7 @@
   <link import="" href="./sections/settings.html">
   <link import="" href="./sections/tracking.html">
   <link import="" href="./sections/export.html">
-  <link import="" href="./sections/calender.html">
+  <link import="" href="./sections/calendar.html">
 </head>
 
 <body class="sidebar-mini ">
@@ -127,7 +127,7 @@
           </li>
 
           <li>
-            <a class="sectionOption" section="calender">
+            <a class="sectionOption" section="calendar">
               <i class="tim-icons icon-time-alarm"></i>
               <p>Calendar</p>
             </a>
@@ -156,7 +156,7 @@
                 <span class="navbar-toggler-bar bar3"></span>
               </button>
             </div>
-            <a class="navbar-brand" href="javascript:void(0)">Dashboard</a>
+            <a id="navbar-brand" class="navbar-brand" href="javascript:void(0)">Dashboard</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
             aria-expanded="false" aria-label="Toggle navigation">
@@ -337,6 +337,7 @@
           Array.from(document.getElementsByClassName('section')).forEach(section => section != showSection ?
             section.style
             .display = 'none' : true);
+          document.getElementById('navbar-brand').innerText = option.getAttribute('section');
           showSection.style.display = '';
         }
       });
