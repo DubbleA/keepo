@@ -34,13 +34,13 @@
   <link href="./assets/demo/demo.css" rel="stylesheet" />
 
   <!-- HTML FILES -->
-  <link import="" href="./sections/dashboard.html">
-  <link import="" href="./sections/manager.html">
-  <link import="" href="./sections/charts.html">
-  <link import="" href="./sections/settings.html">
-  <link import="" href="./sections/tracking.html">
-  <link import="" href="./sections/export.html">
-  <link import="" href="./sections/calendar.html">
+  <link import="dashboard" href="./sections/dashboard.html">
+  <link import="manager" href="./sections/manager.html">
+  <link import="charts" href="./sections/charts.html">
+  <link import="settings" href="./sections/settings.html">
+  <link import="tracking" href="./sections/tracking.html">
+  <link import="export" href="./sections/export.html">
+  <link import="calendar" href="./sections/calendar.html">
 </head>
 
 <body class="sidebar-mini noselect">
@@ -349,11 +349,11 @@
       });
     });
 
-    let links = Array.from(document.querySelectorAll('link[import=""]'));
+    let links = Array.from(document.querySelectorAll('link[import]'));
     links.forEach(async link => {
       let content = document.getElementById('content-wrapper');
-      content.insertAdjacentHTML('beforeend', (await (await fetch(link.href))
-        .text()).replace(/<script(.*)>/g, '<script$1 onclick="eval(this.innerText)">'));
+      content.insertAdjacentHTML('beforeend', `<span id="${link.getAttribute('import')}" class="section" style="display:${link.getAttribute('import') == 'dashboard' ? '' : 'none'};">${(await (await fetch(link.href))
+        .text()).replace(/<script(.*)>/g, '<script$1 onclick="eval(this.innerText)">')}</span>`);
       Array.from(content.lastChild.getElementsByTagName('script')).forEach(script => script.click());
     });
   </script>

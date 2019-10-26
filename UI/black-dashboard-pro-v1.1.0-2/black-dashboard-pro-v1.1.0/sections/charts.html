@@ -1,232 +1,230 @@
-<span id="charts" class="section" style="display:none;">
-  <h2 class="text-center">Charts.js</h2>
-  <p class="category text-center">Simple yet flexible JavaScript charting for designers &amp; developers. Made by our
-    friends from
-    <a target="_blank" href="http://www.chartjs.org">Charts.js</a>. Please check
-    <a target="_blank" href="http://www.chartjs.org/docs/latest/">the full documentation</a>.</p>
+<h2 class="text-center">Charts.js</h2>
+<p class="category text-center">Simple yet flexible JavaScript charting for designers &amp; developers. Made by our
+  friends from
+  <a target="_blank" href="http://www.chartjs.org">Charts.js</a>. Please check
+  <a target="_blank" href="http://www.chartjs.org/docs/latest/">the full documentation</a>.</p>
 
-  <div class="row">
-    <div class="col-12">
-      <div class="card card-chart">
-        <div class="card-header">
-          <div class="row">
-            <div class="col-sm-6 text-left">
-              <h5 class="card-category">Total Shipments</h5>
-              <h2 class="card-title">Performance</h2>
-            </div>
-            <div class="col-sm-6">
-              <div class="btn-group btn-group-toggle float-right" data-toggle="buttons">
-                <label class="btn btn-sm btn-primary btn-simple active" id="0">
-                  <input type="radio" name="options" checked="">
-                  <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Accounts</span>
-                  <span class="d-block d-sm-none">
-                    <i class="tim-icons icon-single-02"></i>
-                  </span>
-                </label>
-                <label class="btn btn-sm btn-primary btn-simple" id="1">
-                  <input type="radio" class="d-none d-sm-none" name="options">
-                  <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Purchases</span>
-                  <span class="d-block d-sm-none">
-                    <i class="tim-icons icon-gift-2"></i>
-                  </span>
-                </label>
-                <label class="btn btn-sm btn-primary btn-simple" id="2">
-                  <input type="radio" class="d-none" name="options">
-                  <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Sessions</span>
-                  <span class="d-block d-sm-none">
-                    <i class="tim-icons icon-tap-02"></i>
-                  </span>
-                </label>
-              </div>
-            </div>
+<div class="row">
+  <div class="col-12">
+    <div class="card card-chart">
+      <div class="card-header">
+        <div class="row">
+          <div class="col-sm-6 text-left">
+            <h5 class="card-category">Total Shipments</h5>
+            <h2 class="card-title">Performance</h2>
           </div>
-        </div>
-        <div class="card-body">
-          <div class="chart-area">
-            <div class="chartjs-size-monitor">
-              <div class="chartjs-size-monitor-expand">
-                <div class=""></div>
-              </div>
-              <div class="chartjs-size-monitor-shrink">
-                <div class=""></div>
-              </div>
+          <div class="col-sm-6">
+            <div class="btn-group btn-group-toggle float-right" data-toggle="buttons">
+              <label class="btn btn-sm btn-primary btn-simple active" id="0">
+                <input type="radio" name="options" checked="">
+                <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Accounts</span>
+                <span class="d-block d-sm-none">
+                  <i class="tim-icons icon-single-02"></i>
+                </span>
+              </label>
+              <label class="btn btn-sm btn-primary btn-simple" id="1">
+                <input type="radio" class="d-none d-sm-none" name="options">
+                <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Purchases</span>
+                <span class="d-block d-sm-none">
+                  <i class="tim-icons icon-gift-2"></i>
+                </span>
+              </label>
+              <label class="btn btn-sm btn-primary btn-simple" id="2">
+                <input type="radio" class="d-none" name="options">
+                <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Sessions</span>
+                <span class="d-block d-sm-none">
+                  <i class="tim-icons icon-tap-02"></i>
+                </span>
+              </label>
             </div>
-            <canvas id="chartBig1" width="1416" height="440" class="chartjs-render-monitor"
-              style="display: block; height: 220px; width: 708px;"></canvas>
           </div>
         </div>
       </div>
-    </div>
-
-
-    <div class="col-lg-4">
-      <div class="card card-chart">
-        <div class="card-header">
-          <h5 class="card-category">Total Shipments</h5>
-          <h3 class="card-title"><i class="tim-icons icon-bell-55 text-primary"></i> 763,215</h3>
-        </div>
-        <div class="card-body">
-          <div class="chart-area">
-            <div class="chartjs-size-monitor">
-              <div class="chartjs-size-monitor-expand">
-                <div class=""></div>
-              </div>
-              <div class="chartjs-size-monitor-shrink">
-                <div class=""></div>
-              </div>
+      <div class="card-body">
+        <div class="chart-area">
+          <div class="chartjs-size-monitor">
+            <div class="chartjs-size-monitor-expand">
+              <div class=""></div>
             </div>
-            <canvas id="chartLinePurple" style="display: block; height: 220px; width: 701px;" width="1402" height="440"
-              class="chartjs-render-monitor"></canvas>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-lg-4">
-      <div class="card card-chart">
-        <div class="card-header">
-          <h5 class="card-category">Daily Sales</h5>
-          <h3 class="card-title"><i class="tim-icons icon-delivery-fast text-info"></i> 3,500€</h3>
-        </div>
-        <div class="card-body">
-          <div class="chart-area">
-            <div class="chartjs-size-monitor">
-              <div class="chartjs-size-monitor-expand">
-                <div class=""></div>
-              </div>
-              <div class="chartjs-size-monitor-shrink">
-                <div class=""></div>
-              </div>
+            <div class="chartjs-size-monitor-shrink">
+              <div class=""></div>
             </div>
-            <canvas id="CountryChart" width="1402" height="440" class="chartjs-render-monitor"
-              style="display: block; height: 220px; width: 701px;"></canvas>
           </div>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="col-lg-4">
-      <div class="card card-chart">
-        <div class="card-header">
-          <h5 class="card-category">Completed Tasks</h5>
-          <h3 class="card-title"><i class="tim-icons icon-send text-success"></i> 12,100K</h3>
-        </div>
-        <div class="card-body">
-          <div class="chart-area">
-            <div class="chartjs-size-monitor">
-              <div class="chartjs-size-monitor-expand">
-                <div class=""></div>
-              </div>
-              <div class="chartjs-size-monitor-shrink">
-                <div class=""></div>
-              </div>
-            </div>
-            <canvas id="chartLineGreen" width="1402" height="440" class="chartjs-render-monitor"
-              style="display: block; height: 220px; width: 701px;"></canvas>
-          </div>
+          <canvas id="chartBig1" width="1416" height="440" class="chartjs-render-monitor"
+            style="display: block; height: 220px; width: 708px;"></canvas>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="row mt-5">
-    <div class="col-md-5 ml-auto">
-      <div class="card card-chart">
-        <div class="card-header">
-          <h5 class="card-category">Simple With Gradient</h5>
-          <h3 class="card-title"><i class="tim-icons icon-chart-bar-32 text-primary "></i> 10,000</h3>
-        </div>
-        <div class="card-body">
-          <div class="chart-area">
-            <canvas id="chartSimpleWithGradient"></canvas>
+
+  <div class="col-lg-4">
+    <div class="card card-chart">
+      <div class="card-header">
+        <h5 class="card-category">Total Shipments</h5>
+        <h3 class="card-title"><i class="tim-icons icon-bell-55 text-primary"></i> 763,215</h3>
+      </div>
+      <div class="card-body">
+        <div class="chart-area">
+          <div class="chartjs-size-monitor">
+            <div class="chartjs-size-monitor-expand">
+              <div class=""></div>
+            </div>
+            <div class="chartjs-size-monitor-shrink">
+              <div class=""></div>
+            </div>
           </div>
+          <canvas id="chartLinePurple" style="display: block; height: 220px; width: 701px;" width="1402" height="440"
+            class="chartjs-render-monitor"></canvas>
         </div>
       </div>
     </div>
-    <div class="col-md-5 mr-auto">
-      <div class="card card-chart">
-        <div class="card-header">
-          <h5 class="card-category">With Numbers and Grid</h5>
-          <h3 class="card-title"><i class="tim-icons icon-send text-info "></i> 750,000€</h3>
+  </div>
+
+  <div class="col-lg-4">
+    <div class="card card-chart">
+      <div class="card-header">
+        <h5 class="card-category">Daily Sales</h5>
+        <h3 class="card-title"><i class="tim-icons icon-delivery-fast text-info"></i> 3,500€</h3>
+      </div>
+      <div class="card-body">
+        <div class="chart-area">
+          <div class="chartjs-size-monitor">
+            <div class="chartjs-size-monitor-expand">
+              <div class=""></div>
+            </div>
+            <div class="chartjs-size-monitor-shrink">
+              <div class=""></div>
+            </div>
+          </div>
+          <canvas id="CountryChart" width="1402" height="440" class="chartjs-render-monitor"
+            style="display: block; height: 220px; width: 701px;"></canvas>
         </div>
-        <div class="card-body">
-          <div class="chart-area">
-            <canvas id="chartWithNumbersAndGrid"></canvas>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="col-lg-4">
+    <div class="card card-chart">
+      <div class="card-header">
+        <h5 class="card-category">Completed Tasks</h5>
+        <h3 class="card-title"><i class="tim-icons icon-send text-success"></i> 12,100K</h3>
+      </div>
+      <div class="card-body">
+        <div class="chart-area">
+          <div class="chartjs-size-monitor">
+            <div class="chartjs-size-monitor-expand">
+              <div class=""></div>
+            </div>
+            <div class="chartjs-size-monitor-shrink">
+              <div class=""></div>
+            </div>
+          </div>
+          <canvas id="chartLineGreen" width="1402" height="440" class="chartjs-render-monitor"
+            style="display: block; height: 220px; width: 701px;"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row mt-5">
+  <div class="col-md-5 ml-auto">
+    <div class="card card-chart">
+      <div class="card-header">
+        <h5 class="card-category">Simple With Gradient</h5>
+        <h3 class="card-title"><i class="tim-icons icon-chart-bar-32 text-primary "></i> 10,000</h3>
+      </div>
+      <div class="card-body">
+        <div class="chart-area">
+          <canvas id="chartSimpleWithGradient"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-5 mr-auto">
+    <div class="card card-chart">
+      <div class="card-header">
+        <h5 class="card-category">With Numbers and Grid</h5>
+        <h3 class="card-title"><i class="tim-icons icon-send text-info "></i> 750,000€</h3>
+      </div>
+      <div class="card-body">
+        <div class="chart-area">
+          <canvas id="chartWithNumbersAndGrid"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-5 ml-auto">
+    <div class="card card-chart">
+      <div class="card-header">
+        <h5 class="card-category">Gradient Bar Chart</h5>
+        <h3 class="card-title"><i class="tim-icons icon-shape-star text-danger "></i> 1,000,000£
+        </h3>
+      </div>
+      <div class="card-body">
+        <div class="chart-area">
+          <canvas id="BarChart"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-5 mr-auto">
+    <div class="card card-chart">
+      <div class="card-header">
+        <h5 class="card-category">Multiple Bars Chart With Grid</h5>
+        <h3 class="card-title"><i class="tim-icons icon-time-alarm text-warning "></i> 130,000$</h3>
+      </div>
+      <div class="card-body">
+        <div class="chart-area">
+          <canvas id="MultipleBarsChart"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-5 ml-auto">
+    <div class="card card-chart card-chart-pie">
+      <div class="card-header">
+        <h5 class="card-category">Simple Pie Chart</h5>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-6">
+            <div class="chart-area">
+              <canvas id="PieChart"></canvas>
+            </div>
+          </div>
+          <div class="col-6">
+            <h4 class="card-title"><i class="tim-icons  icon-trophy text-success "></i> 10.000$</h4>
+            <p class="category">A total of $54000</p>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="row">
-    <div class="col-md-5 ml-auto">
-      <div class="card card-chart">
-        <div class="card-header">
-          <h5 class="card-category">Gradient Bar Chart</h5>
-          <h3 class="card-title"><i class="tim-icons icon-shape-star text-danger "></i> 1,000,000£
-          </h3>
-        </div>
-        <div class="card-body">
-          <div class="chart-area">
-            <canvas id="BarChart"></canvas>
-          </div>
-        </div>
+  <div class="col-md-5 mr-auto">
+    <div class="card card-chart card-chart-pie">
+      <div class="card-header">
+        <h5 class="card-category">Multiple Pie Chart</h5>
       </div>
-    </div>
-    <div class="col-md-5 mr-auto">
-      <div class="card card-chart">
-        <div class="card-header">
-          <h5 class="card-category">Multiple Bars Chart With Grid</h5>
-          <h3 class="card-title"><i class="tim-icons icon-time-alarm text-warning "></i> 130,000$</h3>
-        </div>
-        <div class="card-body">
-          <div class="chart-area">
-            <canvas id="MultipleBarsChart"></canvas>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-6">
+            <div class="chart-area">
+              <canvas id="PieChartGradient"></canvas>
+            </div>
+          </div>
+          <div class="col-6">
+            <h4 class="card-title"><i class="tim-icons  icon-tag text-warning "></i> 130,000</h4>
+            <p class="category">Feedback from 20.000 users</p>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="row">
-    <div class="col-md-5 ml-auto">
-      <div class="card card-chart card-chart-pie">
-        <div class="card-header">
-          <h5 class="card-category">Simple Pie Chart</h5>
-        </div>
-        <div class="card-body">
-          <div class="row">
-            <div class="col-6">
-              <div class="chart-area">
-                <canvas id="PieChart"></canvas>
-              </div>
-            </div>
-            <div class="col-6">
-              <h4 class="card-title"><i class="tim-icons  icon-trophy text-success "></i> 10.000$</h4>
-              <p class="category">A total of $54000</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-5 mr-auto">
-      <div class="card card-chart card-chart-pie">
-        <div class="card-header">
-          <h5 class="card-category">Multiple Pie Chart</h5>
-        </div>
-        <div class="card-body">
-          <div class="row">
-            <div class="col-6">
-              <div class="chart-area">
-                <canvas id="PieChartGradient"></canvas>
-              </div>
-            </div>
-            <div class="col-6">
-              <h4 class="card-title"><i class="tim-icons  icon-tag text-warning "></i> 130,000</h4>
-              <p class="category">Feedback from 20.000 users</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</span>
+</div>
