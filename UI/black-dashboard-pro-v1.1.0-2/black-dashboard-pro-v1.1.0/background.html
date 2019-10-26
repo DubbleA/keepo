@@ -344,8 +344,7 @@
           showSection.style.display = '';
           let logo = document.getElementById('navbar-brand');
           let logoPosition = logo.getBoundingClientRect();
-          if (logoPosition.top < 0)
-            logo.scrollIntoView();
+          logoPosition.top < 0 ? logo.scrollIntoView() : '';
         }
       });
     });
