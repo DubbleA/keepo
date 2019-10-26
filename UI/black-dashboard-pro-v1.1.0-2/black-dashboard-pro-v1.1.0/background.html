@@ -342,17 +342,21 @@
             'none');
           document.getElementById('navbar-brand').innerText = option.getAttribute('section');
           showSection.style.display = '';
+          let logo = document.getElementById('navbar-brand');
+          let logoPosition = logo.getBoundingClientRect();
+          if (logoPosition.top < 0)
+            logo.scrollIntoView();
         }
       });
     });
 
     let links = Array.from(document.querySelectorAll('link[import=""]'));
     links.forEach(async link => {
-      document.getElementById('content-wrapper').insertAdjacentHTML('beforeend', (await (await fetch(link.href))
+      let content = document.getElementById('content-wrapper');
+      content.insertAdjacentHTML('beforeend', (await (await fetch(link.href))
         .text()).replace(/<script(.*)>/g, '<script$1 onclick="eval(this.innerText)">'));
+      Array.from(content.lastChild.getElementsByTagName('script')).forEach(script => script.click());
     });
-    Array.from(document.getElementById('content-wrapper').getElementsByTagName('script')).forEach(script =>
-        alert(script));
   </script>
 </body>
 
