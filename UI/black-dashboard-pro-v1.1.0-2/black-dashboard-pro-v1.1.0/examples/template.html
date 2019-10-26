@@ -19,151 +19,70 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
-  <link rel="icon" type="image/png" href="./assets/img/slogo.png">
+  <link rel="icon" type="image/png" href="./assets/img/favicon.png">
   <title>
-    Synchronous
+    Black Dashboard PRO by Creative Tim
   </title>
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
-  <link href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
   <!-- Nucleo Icons -->
   <link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
   <!-- CSS Files -->
   <link href="./assets/css/black-dashboard.css?v=1.1.0" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="./assets/demo/demo.css" rel="stylesheet" />
-
-  <!-- HTML FILES -->
-  <link import="" href="./sections/dashboard.html">
-  <link import="" href="./sections/manager.html">
-  <link import="" href="./sections/charts.html">
-  <link import="" href="./sections/settings.html">
-  <link import="" href="./sections/tracking.html">
-  <link import="" href="./sections/export.html">
-  <link import="" href="./sections/calendar.html">
 </head>
 
-<body class="sidebar-mini noselect">
+<body class="sidebar-mini ">
   <div class="wrapper">
     <div class="navbar-minimize-fixed">
-      <button class="btn btn-link btn-just-icon">
+      <button class="minimize-sidebar btn btn-link btn-just-icon">
         <i class="tim-icons icon-align-center visible-on-sidebar-regular text-muted"></i>
         <i class="tim-icons icon-bullet-list-67 visible-on-sidebar-mini text-muted"></i>
       </button>
     </div>
-    <div class="sidebar noselect" data="blue">
-      <!--
-        Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red"
-    -->
+    <div class="sidebar">
       <div class="sidebar-wrapper">
         <div class="logo">
           <a href="javascript:void(0)" class="simple-text logo-mini">
-            SF
+            CT
           </a>
           <a href="javascript:void(0)" class="simple-text logo-normal">
-            Synch Finance
+            Creative Tim
           </a>
         </div>
         <ul class="nav">
           <li class="active">
-            <a class="sectionOption" section="dashboard">
-              <i class="tim-icons icon-chart-pie-36"></i>
-              <p>Dashboard</p>
-            </a>
-          </li>
-
-          <li>
-            <a class="sectionOption" section="manager">
-              <i class="tim-icons icon-molecule-40"></i>
-              <p>Manager</p>
-            </a>
-          </li>
-
-
-          <li>
-            <a class="sectionOption" section="charts">
-              <i class="tim-icons icon-chart-bar-32"></i>
-              <p>Charts</p>
-            </a>
-          </li>
-
-
-          <li>
-            <a class="sectionOption" data-toggle="collapse" href="#widgets">
-              <i class="tim-icons icon-settings"></i>
-              <p>
-                Widgets
-                <b class="caret"></b>
-              </p>
-            </a>
-            <div class="collapse" id="widgets">
-              <ul class="nav">
-
-                <li>
-                  <a class="sectionOption" section="settings">
-                    <span class="sidebar-mini-icon">Set</span>
-                    <span class="sidebar-normal"> Settings </span>
-
-                  </a>
-                </li>
-                <li>
-                  <a class="sectionOption" section="tracking">
-                    <span class="sidebar-mini-icon">Tr</span>
-                    <span class="sidebar-normal"> Tracking </span>
-
-                  </a>
-                </li>
-
-                <li>
-                  <a class="sectionOption" section="export">
-                    <span class="sidebar-mini-icon">Exp</span>
-                    <span class="sidebar-normal"> Export </span>
-
-                  </a>
-                </li>
-
-              </ul>
-            </div>
-          </li>
-
-          <li>
-            <a class="sectionOption" section="calendar">
-              <i class="tim-icons icon-time-alarm"></i>
-              <p>Calendar</p>
+            <a href="./template.html">
+              <i class="tim-icons icon-atom"></i>
+              <p>Template</p>
             </a>
           </li>
         </ul>
       </div>
     </div>
-
-
-    <div class="main-panel" data="blue">
+    <div class="main-panel">
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-absolute navbar-transparent">
         <div class="container-fluid">
           <div class="navbar-wrapper">
             <div class="navbar-minimize d-inline">
-              <img src="./assets/img/slogo - Copy.png"
-                style="width: 50px;display: inline-block !important;margin-left: 5px;margin-right: 0px;">
-              <!-- <img src="./assets/img/slogo.png" style="width: 50px;display: inline-block !important;  "> -->
-              <!-- <button class="minimize-sidebar btn btn-link btn-just-icon" rel="tooltip"
-                data-original-title="Sidebar toggle" data-placement="right">
-            
+              <button class="minimize-sidebar btn btn-link btn-just-icon" rel="tooltip" data-original-title="Sidebar toggle" data-placement="right">
                 <i class="tim-icons icon-align-center visible-on-sidebar-regular"></i>
                 <i class="tim-icons icon-bullet-list-67 visible-on-sidebar-mini"></i>
-              </button> -->
+              </button>
             </div>
             <div class="navbar-toggle d-inline">
-              <!-- <button type="button" class="navbar-toggler">
+              <button type="button" class="navbar-toggler">
                 <span class="navbar-toggler-bar bar1"></span>
                 <span class="navbar-toggler-bar bar2"></span>
                 <span class="navbar-toggler-bar bar3"></span>
-              </button> -->
+              </button>
             </div>
-            <a id="navbar-brand" class="navbar-brand" href="javascript:void(0)">Dashboard</a>
+            <a class="navbar-brand" href="javascript:void(0)">Dashboard</a>
           </div>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
-            aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar navbar-kebab"></span>
             <span class="navbar-toggler-bar navbar-kebab"></span>
             <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -171,8 +90,7 @@
           <div class="collapse navbar-collapse" id="navigation">
             <ul class="navbar-nav ml-auto">
               <li class="search-bar input-group">
-                <button class="btn btn-link" id="search-button" data-toggle="modal" data-target="#searchModal"><i
-                    class="tim-icons icon-zoom-split"></i>
+                <button class="btn btn-link" id="search-button" data-toggle="modal" data-target="#searchModal"><i class="tim-icons icon-zoom-split"></i>
                   <span class="d-lg-none d-md-block">Search</span>
                 </button>
               </li>
@@ -230,8 +148,7 @@
           </div>
         </div>
       </nav>
-      <div class="modal modal-search fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModal"
-        aria-hidden="true">
+      <div class="modal modal-search fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModal" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
@@ -244,7 +161,7 @@
         </div>
       </div>
       <!-- End Navbar -->
-      <div class="content" id="content-wrapper" style="height: auto;">
+      <div class="content">
         <!-- Your content here -->
       </div>
       <footer class="footer">
@@ -252,7 +169,7 @@
           <ul class="nav">
             <li class="nav-item">
               <a href="javascript:void(0)" class="nav-link">
-                Synchronous
+                Creative Tim
               </a>
             </li>
             <li class="nav-item">
@@ -271,7 +188,7 @@
             <script>
               document.write(new Date().getFullYear())
             </script> made with <i class="tim-icons icon-heart-2"></i> by
-            <a href="javascript:void(0)" target="_blank">Sychronous Team</a> for a better community.
+            <a href="javascript:void(0)" target="_blank">Creative Tim</a> for a better web.
           </div>
         </div>
       </footer>
@@ -314,7 +231,7 @@
   <script src="./assets/js/plugins/nouislider.min.js"></script>
   <!--  Google Maps Plugin    -->
   <!-- Place this tag in your head or just before your close body tag. -->
-  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script> -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
   <!-- Chart JS -->
   <script src="./assets/js/plugins/chartjs.min.js"></script>
   <!--  Notifications Plugin    -->
@@ -323,37 +240,6 @@
   <script src="./assets/js/black-dashboard.min.js?v=1.1.0"></script>
   <!-- Black Dashboard DEMO methods, don't include it in your project! -->
   <script src="./assets/demo/demo.js"></script>
-
-  <script>
-    let options = Array.from(document.getElementsByClassName('sectionOption'));
-    options.forEach(option => {
-      option.addEventListener('click', () => {
-        if (!option.getAttribute('data-toggle')) {
-          options.forEach(opt => opt.parentNode.className = '');
-          option.parentNode.className = 'active';
-          try {
-            if (option.parentNode.parentNode.parentNode.previousElementSibling.className == 'sectionOption')
-              option.parentNode.parentNode.parentNode.parentNode.className = 'active';
-          } catch (e) {
-            //Haha stinky, haha respected error
-          }
-          let showSection = document.getElementById(option.getAttribute('section'));
-          Array.from(document.getElementsByClassName('section')).forEach(section => section.style.display =
-            'none');
-          document.getElementById('navbar-brand').innerText = option.getAttribute('section');
-          showSection.style.display = '';
-        }
-      });
-    });
-
-    let links = Array.from(document.querySelectorAll('link[import=""]'));
-    links.forEach(async link => {
-      document.getElementById('content-wrapper').insertAdjacentHTML('beforeend', (await (await fetch(link.href))
-        .text()).replace(/<script(.*)>/g, '<script$1 onclick="eval(this.innerText)">'));
-    });
-    Array.from(document.getElementById('content-wrapper').getElementsByTagName('script')).forEach(script =>
-        alert(script));
-  </script>
 </body>
 
 </html>
