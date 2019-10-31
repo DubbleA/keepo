@@ -183,7 +183,7 @@
   $('#myModal').modal(options)
 </script>
 <script>
-  window.appendTable = (tableId, ...args) => {
+  function appendTable(tableId, ...args) {
     let table = document.getElementById(tableId);
     let row = document.createElement('tr');
     args.forEach(colData => row.insertAdjacentHTML('beforeend',
@@ -192,16 +192,24 @@
     table.appendChild(row);
   }
 
-  window.addEmptyRow = () => {
+  function addEmptyRow() {
     appendTable('accountsTable', '', '<input type="text" class="form-control" placeholder="Username">',
       '<input type="password" class="form-control" placeholder="Password">', '');
   }
 
-  window.removeRow = (element) => {
+  function removeRow(element) {
     removeElement(element.parentElement.parentElement)
   }
 
-  window.removeElement = (element) => {
+  let oof = () => {
+    console.log(123);
+  }
+
+  let oof = function() {
+    console.log(5445)
+  }
+
+  function removeElement(element) {
     element.parentNode.removeChild(element);
   }
 

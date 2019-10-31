@@ -324,6 +324,7 @@
   <!-- Black Dashboard DEMO methods, don't include it in your project! -->
   <script src="./assets/demo/demo.js"></script>
 
+  <!-- Ethan's Children, please don't break :( -->
   <script>
     let options = Array.from(document.getElementsByClassName('sectionOption'));
     options.forEach(option => {
@@ -353,9 +354,13 @@
     links.forEach(async link => {
       let content = document.getElementById('content-wrapper');
       content.insertAdjacentHTML('beforeend', `<span id="${link.getAttribute('import')}" class="section" style="display:${link.getAttribute('import') == 'dashboard' ? '' : 'none'};">${(await (await fetch(link.href))
-        .text())}</span>`);
-        //.replace(/<script(.*)>/g, '<script$1 onclick="eval(this.innerText);">')
-      Array.from(content.lastChild.getElementsByTagName('script')).forEach(script => eval(script.innerText));
+    .text())}</span>`);
+      Array.from(content.lastChild.getElementsByTagName('script')).forEach(script => {
+        script.innerHTML = script.innerHTML.replace(
+          /(?:function|var|let|const)\s+(\w+)\s*=?\s*(?:function)?\s*\(([^\(\)]*)\)\s*(?:=>)?\s*/g,
+          'window.$1 = ($2) => ');
+        eval(script.innerHTML);
+      });
     });
   </script>
 </body>
