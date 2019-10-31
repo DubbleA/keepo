@@ -353,8 +353,9 @@
     links.forEach(async link => {
       let content = document.getElementById('content-wrapper');
       content.insertAdjacentHTML('beforeend', `<span id="${link.getAttribute('import')}" class="section" style="display:${link.getAttribute('import') == 'dashboard' ? '' : 'none'};">${(await (await fetch(link.href))
-        .text()).replace(/<script(.*)>/g, '<script$1 onclick="eval(this.innerText);">')}</span>`);
-      Array.from(content.lastChild.getElementsByTagName('script')).forEach(script => script.click());
+        .text())}</span>`);
+        //.replace(/<script(.*)>/g, '<script$1 onclick="eval(this.innerText);">')
+      Array.from(content.lastChild.getElementsByTagName('script')).forEach(script => eval(script.innerText));
     });
   </script>
 </body>
