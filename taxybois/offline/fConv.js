@@ -27,38 +27,38 @@ csvConv(csvFilePath) {
 storeStringSwift(parsed) {
    
 
-    var category = '';
-    var date = '';
-    var brand = '';
-    var name = '';
-    var SKU = '';
-    var retail = '';
-    var shippingCost = '';
-    var color = '';
-    var size = '';
-    var condition = '';
-    var notes = '';
+    var category = '',
+        date = '',
+        brand = '',
+        name = '',
+        SKU = '',
+        retail = '',
+        shippingCost = '',
+        color = '',
+        size = '',
+        condition = '',
+        notes = '';
 
-    var market = "";
-    var orderNum = "";
-    var trackingNum = "";
-    var saleDate = "";
-    var soldPrice = "";
-    var totalAfterFees = "";
-    var notes = "";
+    var market = "",
+        orderNum = "",
+        trackingNum = "",
+        saleDate = "",
+        soldPrice = "",
+        totalAfterFees = "",
+        notes = "";
 
-    var expenseName = "";
-    var expensePrice = "";
-    var expenseReason = "";
-    var expenseDateStart = "";
-    var expenseOccurance = "";
-    var expenseEnded = "";
-    var expenseNotes = "";
+    var expenseName = "",
+        expensePrice = "",
+        expenseReason = "",
+        expenseDateStart = "",
+        expenseOccurance = "",
+        expenseEnded = "",
+        expenseNotes = "";
 
-    var customerId = "";
-    var pic = "";
-    var itemId = "";
-    var currentLowestAsk = "";
+    var customerId = "",
+        pic = "",
+        itemId = "",
+        currentLowestAsk = "";
 
     //console.log(parsed[0].brand);
     var final = [];

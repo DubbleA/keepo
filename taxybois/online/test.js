@@ -2,21 +2,30 @@ let sales = require('../offline/bigbasicNEW.json');
 const Stockx = require('./Stockx');
 let myStockx = new Stockx();
 
+const fs = require('fs');
+
 start();
+fs.writeFile('./bruh.json', JSON.stringify(sales), (err) => {
+    if (err) console.log(err);
+});
 
 async function start() {
-    for (let sale of sales) {
-        if (sale.inventory.retail != '') {
-            await myStockx.search(sale.inventory.name).then(results => {
+    let keys = Object.keys(sales);
+    for (let i = 0; i < keys.length; i++) {
+        if (sales[keys[i]].inventory.retail != '') {
+            await myStockx.search(sales[keys[i]].inventory.name).then(results => {
                 try {
-                    console.log(results[0].name + ' -- $' + results[0].highest_bid);
+                    sales[keys[i]].inventory.retail = results[0]['searchable_traits']['Retail Price'];
                 } catch (error) {
-                    console.log(sale.inventory.name + ' -- NO VALUE FOUND BRUH');
+                    //
                 }
             });
-            console.log('');
         }
+        console.log(sales[keys[i]].inventory.retail)
     }
+    fs.writeFile('./bruh.json', JSON.stringify(sales), (err) => {
+        if (err) console.log(err);
+    });
 }
 
 // //Example of using the Stockx class
