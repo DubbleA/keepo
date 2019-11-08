@@ -5,27 +5,35 @@ let myStockx = new Stockx();
 const fs = require('fs');
 
 start();
-fs.writeFile('./bruh.json', JSON.stringify(sales), (err) => {
-    if (err) console.log(err);
-});
 
-async function start() {
-    let keys = Object.keys(sales);
-    for (let i = 0; i < keys.length; i++) {
-        if (sales[keys[i]].inventory.retail != '') {
-            await myStockx.search(sales[keys[i]].inventory.name).then(results => {
-                try {
-                    sales[keys[i]].inventory.retail = results[0]['searchable_traits']['Retail Price'];
-                } catch (error) {
-                    //
-                }
-            });
-        }
-        console.log(sales[keys[i]].inventory.retail)
-    }
-    fs.writeFile('./bruh.json', JSON.stringify(sales), (err) => {
-        if (err) console.log(err);
+function start() {
+    // let keys = Object.keys(sales);
+    // for (let i = 0; i < keys.length; i++) {
+    //     // if (sales[keys[i]].inventory.retail == '') {
+    //     //     myStockx.search(sales[keys[i]].inventory.name, results => {
+    //     //         try {
+    //     //             sales[keys[i]].inventory.retail = results[0]['searchable_traits']['Retail Price'] || '';
+    //     //         } catch (error) {
+    //     //             //
+    //     //         }
+    //     //         fs.writeFile('./parts/' + i + '.json', JSON.stringify(sales[keys[i]]), (err) => {
+    //     //             if (err) console.log(err);
+    //     //         });
+    //     //     });
+    //     // }
+    //     if (sales[keys[i]].inventory.retail == '') {
+    //         try {
+    //             sales[keys[i]] = require('./parts/' + i + '.json');
+    //         } catch (e) {
+    //             // aa
+    //         }
+    //     }
+    // }
+    let faketneger = '[';
+    fs.readdir('./parts', (err, files) => {
+        files.forEach(file => faketneger += JSON.stringify(require('./parts/' + file)) + ',')
     });
+    setTimeout(() => fs.writeFileSync('./bruh.json', faketneger + ']', (err) => err ? console.log(err) : console.log('Success')), 20000)
 }
 
 // //Example of using the Stockx class

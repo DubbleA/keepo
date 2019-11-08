@@ -94,8 +94,7 @@ module.exports = class Stockx {
     }
 
     //returns array of items
-    search(searchTerm) {
-        return new Promise((resolve, reject) => {
+    search(searchTerm, cb) {
             let options = {
                 url : 'https://xw7sbct9v6-2.algolianet.com/1/indexes/products/query',
                 method: 'POST',
@@ -113,12 +112,11 @@ module.exports = class Stockx {
 
             rp(options)
                 .then((response) => {
-                    resolve(response.body.hits);
+                    cb(response.body.hits);
                 })
                 .catch((error) => {
                     console.log(error);
-                    reject();
+                    cb(null);
             });
-        });
     }
 }
