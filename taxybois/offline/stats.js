@@ -12,19 +12,31 @@
 
 module.exports = class Stats {
     constructor() {}
-    total(parsed) {
-        var rev = 0;
+    taf(parsed) {
+        
         var taf = 0;
-        var counter = 0;
+        
         var i = 0;
         for(i = 0; i < parsed.length; i++){
-            rev = rev + Number(parsed[i].sale.soldPrice);
+            
             taf = taf + Number(parsed[i].sale.totalAfterFees);
-            counter++;
+            
         }
-        //console.log(taf);
-        //console.log(counter);
+        
         return taf;
+    }
+
+    totalSoldPrice(parsed) {
+        var rev = 0;
+        
+        
+        
+        for(let i = 0; i < parsed.length; i++){
+            rev = rev + Number(parsed[i].sale.soldPrice);
+            
+        }
+        
+        return rev;
     }
     
     

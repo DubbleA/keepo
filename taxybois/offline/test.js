@@ -24,9 +24,9 @@ const stats = require('./stats.js');
 var stat = new stats();
 var rawdata = fs.readFileSync('./bigbasicNEW.json');
 var parsed = JSON.parse(rawdata);
-console.log(stat.total(parsed));
-var taf = stat.total(parsed);
-console.log(taf);
+console.log(stat.taf(parsed));
+let rev = stat.totalSoldPrice(parsed)
+console.log(rev);
 
 // const fConv = require("./fConv.js");
 // var finConv = new fConv();
