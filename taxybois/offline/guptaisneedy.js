@@ -1,4 +1,4 @@
-let mysales = require('./JSON GOES HERE');
+let mysales = require('./bigbasicNEW');
 
 let soldRetails = [],
     unsoldRetails = [],

@@ -39,7 +39,44 @@ module.exports = class Stats {
         return rev;
     }
     
+    totalSalesNum(parsed){
+        var counter = 0;
+        for(let i = 0; i < parsed.length; i++){
+            counter++;
+        }
+
+        return counter;
+    }
+
+    ROI(parsed){
+        var soldPrice = 0;
+        var retail = 0;
+        
+
+        for(let i = 0; i < parsed.length; i++){
+            if(parsed[i].inventory.category != "LISTED,UNSOLD"){
+                soldPrice = soldPrice + Number(parsed[i].sale.soldPrice);
+                retail = retail + Number(parsed[i].inventory.retail);
+            }
+            
+        }
+
+        var ROI = (soldPrice - retail) / retail;
+
+        return ROI;
+    }
     
+    inventory(parsed){
+        var inventory = 0;
+        for(let i = 0; i < parsed.length; i++){
+            if(parsed[i].inventory.category == "LISTED,UNSOLD"){
+                inventory = inventory + Number(parsed[i].inventory.retail);
+            }
+            
+        }
+
+        return inventory;
+    }
 
 
 }

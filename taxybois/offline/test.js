@@ -27,6 +27,9 @@ var parsed = JSON.parse(rawdata);
 console.log(stat.taf(parsed));
 let rev = stat.totalSoldPrice(parsed)
 console.log(rev);
+console.log(stat.totalSalesNum(parsed));
+console.log(stat.ROI(parsed));
+console.log(stat.inventory(parsed));
 
 // const fConv = require("./fConv.js");
 // var finConv = new fConv();
