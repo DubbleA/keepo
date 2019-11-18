@@ -27,40 +27,8 @@ csvConv(csvFilePath) {
 storeStringSwift(parsed) {
    
 
-    var category = '',
-        date = '',
-        brand = '',
-        name = '',
-        SKU = '',
-        retail = '',
-        shippingCost = '',
-        color = '',
-        size = '',
-        condition = '',
-        notes = '';
+    var category = '', date = '', brand = '', name = '', SKU = '', retail = '', shippingCost = '', color = '', size = '', condition = '', notes = ''; market = "", orderNum = "", trackingNum = "", saleDate = "", soldPrice = "", totalAfterFees = "", saleNotes = "", expenseName = "", expensePrice = "", expenseReason = "", expenseDateStart = "", expenseOccurance = "", expenseEnded = "", expenseNotes = "", customerId = "", pic = "", itemId = "", currentLowestAsk = "";
 
-    var market = "",
-        orderNum = "",
-        trackingNum = "",
-        saleDate = "",
-        soldPrice = "",
-        totalAfterFees = "",
-        notes = "";
-
-    var expenseName = "",
-        expensePrice = "",
-        expenseReason = "",
-        expenseDateStart = "",
-        expenseOccurance = "",
-        expenseEnded = "",
-        expenseNotes = "";
-
-    var customerId = "",
-        pic = "",
-        itemId = "",
-        currentLowestAsk = "";
-
-    //console.log(parsed[0].brand);
     var final = [];
 
     for (var i = 0; i < parsed.length; i++) {
@@ -86,7 +54,7 @@ storeStringSwift(parsed) {
         notes = this.ifCity(parsed[i].notes);
 
         
-        final.push(this.formatter(category, date, brand, name, SKU, retail, shippingCost, color, size, condition, notes, market, orderNum, trackingNum, saleDate, soldPrice, totalAfterFees, notes, expenseName, expensePrice, expenseReason, expenseDateStart, expenseOccurance, expenseEnded, expenseNotes, customerId, pic, itemId, currentLowestAsk));
+        final.push(this.formatter(category, date, brand, name, SKU, retail, shippingCost, color, size, condition, notes, market, orderNum, trackingNum, saleDate, soldPrice, totalAfterFees, saleNotes, expenseName, expensePrice, expenseReason, expenseDateStart, expenseOccurance, expenseEnded, expenseNotes, customerId, pic, itemId, currentLowestAsk));
     }
 
     var tempdata = '[' + final.slice(0, parsed.length + 1) + ']';
