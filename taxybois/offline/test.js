@@ -19,17 +19,17 @@
 
 
 
-const fs = require('fs');
-const stats = require('./stats.js');
-var stat = new stats();
-var rawdata = fs.readFileSync('./bigbasicNEW.json');
-var parsed = JSON.parse(rawdata);
-console.log(stat.taf(parsed));
-let rev = stat.totalSoldPrice(parsed)
-console.log(rev);
-console.log(stat.totalSalesNum(parsed));
-console.log(stat.ROI(parsed));
-console.log(stat.inventory(parsed));
+// const fs = require('fs');
+// const stats = require('./stats.js');
+// var stat = new stats();
+// var rawdata = fs.readFileSync('./bigbasicNEW.json');
+// var parsed = JSON.parse(rawdata);
+// console.log(stat.taf(parsed));
+// let rev = stat.totalSoldPrice(parsed)
+// console.log(rev);
+// console.log(stat.totalSalesNum(parsed));
+// console.log(stat.ROI(parsed));
+// console.log(stat.inventory(parsed));
 
 // const fConv = require("./fConv.js");
 // var finConv = new fConv();
@@ -44,5 +44,12 @@ console.log(stat.inventory(parsed));
 // console.log(news);
 
 
-//var jeff = JSON.parse(finConv.writeNewFile(finConv.storeStringSwift(finConv.csvConv(fpath))));
-//console.log(jeff[3].inventory.name);
+// var jeff = JSON.parse(finConv.writeNewFile(finConv.storeStringSwift(finConv.csvConv(fpath))));
+// //console.log(jeff[3].inventory.name);
+
+
+const conv = require('./conv.js');
+var finConv = new conv();
+var swift = './brendan.csv';
+var FCinv = './FCinv.csv'
+console.log(finConv.storeString(finConv.csvConv(FCinv), 'FC', 'listed'));

@@ -27,7 +27,7 @@ csvConv(csvFilePath) {
 storeStringSwift(parsed) {
    
 
-    var category = '', date = '', brand = '', name = '', SKU = '', retail = '', shippingCost = '', color = '', size = '', condition = '', notes = ''; market = "", orderNum = "", trackingNum = "", saleDate = "", soldPrice = "", totalAfterFees = "", saleNotes = "", expenseName = "", expensePrice = "", expenseReason = "", expenseDateStart = "", expenseOccurance = "", expenseEnded = "", expenseNotes = "", customerId = "", pic = "", itemId = "", currentLowestAsk = "";
+    var category = '', date = '', brand = '', name = '', SKU = '', retail = '', shippingCost = '', color = '', size = '', condition = '', notes = '', market = "", orderNum = "", trackingNum = "", saleDate = "", soldPrice = "", totalAfterFees = "", saleNotes = "", expenseName = "", expensePrice = "", expenseReason = "", expenseDateStart = "", expenseOccurance = "", expenseEnded = "", expenseNotes = "", customerId = "", pic = "", itemId = "", currentLowestAsk = "";
 
     var final = [];
 
