@@ -7,9 +7,9 @@ module.exports = class Stockx {
 
     //returns nothing
     authenticate(username, password) {
-		return new Promise((resolve, reject) => {
+        return new Promise((resolve, reject) => {
             let options = {
-                url : 'https://stockx.com/api/login',
+                url: 'https://stockx.com/api/login',
                 method: 'POST',
                 headers: {
                     'host': 'stockx.com',
@@ -23,7 +23,7 @@ module.exports = class Stockx {
                     'email': username,
                     'password': password
                 },
-                resolveWithFullResponse : true,
+                resolveWithFullResponse: true,
                 json: true,
                 gzip: true,
                 jar: cookieJar
@@ -42,17 +42,21 @@ module.exports = class Stockx {
         });
     }
 
-	//returns array of items
-	async getAllSales() {
+    //returns array of items
+    async getAllSales() {
         //just a warning incase someone fucks up
         if (!this.customerId) {
             console.warn('Please wait for setup to finish before calling this function');
             return;
-        }        
-		let sales = [];
-		//one line baybeeeee
-		try { for (let i = 1;; sales = sales.concat(await this.getSalePage(i++))) {} } catch (error) { return sales; }
-	}
+        }
+        let sales = [];
+        //one line baybeeeee
+        try {
+            for (let i = 1;; sales = sales.concat(await this.getSalePage(i++))) {}
+        } catch (error) {
+            return sales;
+        }
+    }
 
     //returns array of items
     getSalePage(page) {
@@ -63,7 +67,7 @@ module.exports = class Stockx {
         }
         return new Promise((resolve, reject) => {
             let options = {
-                url : `https://stockx.com/api/customers/${this.customerId}/selling/history`,
+                url: `https://stockx.com/api/customers/${this.customerId}/selling/history`,
                 method: 'GET',
                 headers: {
                     'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
@@ -76,7 +80,7 @@ module.exports = class Stockx {
                     page: page,
                     currency: 'USD'
                 },
-                resolveWithFullResponse : true,
+                resolveWithFullResponse: true,
                 json: true,
                 jar: cookieJar
             }
@@ -89,14 +93,15 @@ module.exports = class Stockx {
                 .catch((error) => {
                     console.log(error);
                     reject();
-            });
+                });
         });
     }
 
     //returns array of items
-    search(searchTerm, cb) {
+    search(searchTerm) {
+        return new Promise((resolve, reject) => {
             let options = {
-                url : 'https://xw7sbct9v6-2.algolianet.com/1/indexes/products/query',
+                url: 'https://xw7sbct9v6-dsn.algolia.net/1/indexes/products/query',
                 method: 'POST',
                 qs: {
                     'x-algolia-agent': 'Algolia for vanilla JavaScript 3.32.1',
@@ -106,17 +111,18 @@ module.exports = class Stockx {
                 body: {
                     params: `query=${encodeURIComponent(searchTerm)}&facets=*&filters=`,
                 },
-                resolveWithFullResponse : true,
+                resolveWithFullResponse: true,
                 json: true,
             }
 
             rp(options)
                 .then((response) => {
-                    cb(response.body.hits);
+                    resolve(response.body.hits);
                 })
                 .catch((error) => {
                     console.log(error);
-                    cb(null);
-            });
+                    reject();
+                });
+        });
     }
 }
